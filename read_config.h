@@ -1,0 +1,1 @@
+std::unordered_map<std::string, std::string> read_config(const std::string &conf_file_name);
