@@ -4,7 +4,7 @@
 #include "read_config.h"
 
 
-std::unordered_map<std::string, std::string> read_config(const std::string &conf_file_name="config.dat") {
+std::unordered_map<std::string, std::string> read_conf(const std::string &conf_file_name="config.dat") {
     std::ifstream in;
     in.open(conf_file_name);
     std::unordered_map<std::string, std::string> res;
@@ -37,7 +37,7 @@ std::unordered_map<std::string, std::string> read_config(const std::string &conf
         exit(3);
     }
     
-    if(stod(res["threads"], res["threads"].length()) < 1) {
+    if(stod(res["threads"], reinterpret_cast<size_t *>(res["threads"].length())) < 1) {
         std::cerr << "Wrong configuration file arguments. See the example in 'configuration_file.txt'\n";
         exit(4);
     }

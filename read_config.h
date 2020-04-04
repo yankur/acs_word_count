@@ -1,1 +1,5 @@
-std::unordered_map<std::string, std::string> read_config(const std::string &conf_file_name);
+#include <unordered_map>
+#include <functional>
+#include <algorithm>
+
+std::unordered_map<std::string, std::string> read_conf(const std::string &conf_file_name);
