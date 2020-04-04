@@ -1,6 +1,4 @@
 #include <iostream>
-#include <thread>
-#include <vector>
 #include <deque>
 #include <mutex>
 #include <condition_variable>
@@ -13,7 +11,7 @@ private:
     std::mutex m_m;
     std::condition_variable cv_m;
 public:
-    my_concurrent_que(){}
+    my_concurrent_que()= default;
 
     void push(T t){
         std::lock_guard<std::mutex> lg(m_m);

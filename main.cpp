@@ -16,7 +16,7 @@ int main() {
     buffer_ss << raw_file.rdbuf();
     std::string buffer{buffer_ss.str()};
 
-    auto dict1 = count_words(buffer);
+    std::unordered_map<std::string, size_t> dict1 = count_words(buffer);
     auto dict2 = count_words(buffer);
 
     for(auto elem : dict1)
@@ -24,17 +24,17 @@ int main() {
         std::cout << elem.first << " a " << elem.second << "\n";
     }
 
-    my_concurrent_que<std::unordered_map<std::string, size_t>> que;
-    que.push(dict1);
-    que.push(dict2);
-
-    auto d1 = que.pop();
-    auto d2 = que.pop();
-
-    merge(d1, d2);
-
-    for(auto elem : d1)
-    {
-        std::cout << elem.first << " a " << elem.second << "\n";
-    }
+//    my_concurrent_que<std::unordered_map<std::string, size_t>> que;
+//    que.push(dict1);
+//    que.push(dict2);
+//
+//    auto d1 = que.pop();
+//    auto d2 = que.pop();
+//
+//    merge(d1, d2);
+//
+//    for(auto elem : d1)
+//    {
+//        std::cout << elem.first << " a " << elem.second << "\n";
+//    }
 }
