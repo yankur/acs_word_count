@@ -16,8 +16,11 @@ int main() {
     buffer_ss << raw_file.rdbuf();
     std::string buffer{buffer_ss.str()};
 
-    auto dict1 = count_words(buffer);
-    auto dict2 = count_words(buffer);
+    std::unordered_map<std::string, size_t> dict1;
+    std::unordered_map<std::string, size_t> dict2;
+
+    count_words(dict1, buffer);
+    count_words(dict2, buffer);
 
     for(auto elem : dict1)
     {
