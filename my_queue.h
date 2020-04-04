@@ -1,6 +1,4 @@
 #include <iostream>
-#include <thread>
-#include <vector>
 #include <deque>
 #include <mutex>
 #include <condition_variable>
