@@ -20,8 +20,8 @@ endif()
 #INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
 add_executable(lab4_word_count
-        count_words_boost.cpp
-        count_words_boost.h
+        count_words.cpp
+        count_words.h
         main.cpp
         main.h
         merge.cpp
