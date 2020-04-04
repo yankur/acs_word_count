@@ -6,5 +6,6 @@
 #include <ctype.h>
 #include <string>
 #include <map>
+#include <bits/unordered_map.h>
 
-std::map<std::string, int> count_words(const std::string inp_string);
+std::unordered_map<std::string, size_t> count_words(const std::string inp_string);
