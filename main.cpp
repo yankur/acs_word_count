@@ -3,7 +3,7 @@
 #include <iostream>
 
 #include "merge.h"
-#include "count_words.h"
+#include "count_words_boost.h"
 #include "my_queue.h"
 
 
@@ -19,7 +19,7 @@ int main() {
     auto dict1 = count_words(buffer);
     auto dict2 = count_words(buffer);
 
-    for(auto elem : dict1)
+    for(const auto& elem : dict1)
     {
         std::cout << elem.first << " a " << elem.second << "\n";
     }
@@ -33,7 +33,7 @@ int main() {
 
     merge(d1, d2);
 
-    for(auto elem : d1)
+    for(const auto& elem : d1)
     {
         std::cout << elem.first << " a " << elem.second << "\n";
     }
