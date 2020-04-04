@@ -1,15 +1,17 @@
 #include <cctype>
 #include <unordered_map>
+#include <iostream>
 
 void dict_update(std::unordered_map<std::string, size_t> dict_of_words, const std::string& word);
 
 std::unordered_map<std::string, size_t> count_words(const std::string& inp_string) {
+    std::cout << "im counting..";
     std::unordered_map<std::string, size_t> dict_of_words;
 
-    std::string word;
+    std::string word = "";
     for (auto x : inp_string)
     {
-        if (isalpha(x)) {
+        if (!isalpha(x)) {
             dict_update(dict_of_words, word);
             word = "";
         }
@@ -20,14 +22,10 @@ std::unordered_map<std::string, size_t> count_words(const std::string& inp_strin
 }
 
 void dict_update(std::unordered_map<std::string, size_t> dict_of_words, const std::string& word) {
-    if (dict_of_words.count(word) == 0) {
-        dict_of_words.insert (std::pair<std::string, size_t>(word, 1));
-    }
-    else {
-        std::unordered_map<std::string, size_t>::iterator itr;
-        itr = dict_of_words.find(word);
-        if (itr != dict_of_words.end())
-            itr->second = 1;
+    if (dict_of_words.find(word) == dict_of_words.end()) {
+        dict_of_words[word] = 1;
+    } else {
+        dict_of_words[word]++;
     }
 }
 
