@@ -6,7 +6,7 @@
 
 
 int main() {
-
+    
     std::string current_file = "/home/hryts/UCU/22/aks/acs_word_count/data.txt";
 
     std::ifstream raw_file(current_file, std::ios::binary);
