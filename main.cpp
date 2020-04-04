@@ -16,12 +16,12 @@ int main() {
     buffer_ss << raw_file.rdbuf();
     std::string buffer{buffer_ss.str()};
 
-    std::unordered_map<std::string, size_t> dict1 = count_words(buffer);
+    auto dict1 = count_words(buffer);
     auto dict2 = count_words(buffer);
 
     for(const auto& elem : dict1)
     {
-        std::cout << elem.first << " a " << elem.second << "\n";
+        std::cout << elem.first << " " << elem.second << "\n";
     }
     my_concurrent_que<std::unordered_map<std::string, size_t>> que;
     que.push(dict1);
