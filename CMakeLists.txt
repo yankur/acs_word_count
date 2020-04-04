@@ -16,12 +16,12 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     set( CMAKE_CXX_FLAGS "-O2" )
 endif()
 
-FIND_PACKAGE(  Boost 1.65 COMPONENTS REQUIRED)
-INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
+#FIND_PACKAGE(  Boost 1.65 COMPONENTS REQUIRED)
+#INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
 add_executable(lab4_word_count
-        count_words.cpp
-        count_words.h
+        count_words_boost.cpp
+        count_words_boost.h
         main.cpp
         main.h
         merge.cpp
@@ -31,4 +31,4 @@ add_executable(lab4_word_count
         read_config.cpp
         read_config.h)
 
-TARGET_LINK_LIBRARIES( lab4_word_count LINK_PUBLIC ${Boost_LIBRARIES} )
+#TARGET_LINK_LIBRARIES( lab4_word_count LINK_PUBLIC ${Boost_LIBRARIES} )
