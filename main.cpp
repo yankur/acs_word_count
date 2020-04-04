@@ -23,8 +23,6 @@ int main() {
     {
         std::cout << elem.first << " a " << elem.second << "\n";
     }
-
-<<<<<<< HEAD
     my_concurrent_que<std::unordered_map<std::string, size_t>> que;
     que.push(dict1);
     que.push(dict2);
@@ -38,19 +36,4 @@ int main() {
     {
         std::cout << elem.first << " a " << elem.second << "\n";
     }
-=======
-//    my_concurrent_que<std::unordered_map<std::string, size_t>> que;
-//    que.push(dict1);
-//    que.push(dict2);
-//
-//    auto d1 = que.pop();
-//    auto d2 = que.pop();
-//
-//    merge(d1, d2);
-//
-//    for(auto elem : d1)
-//    {
-//        std::cout << elem.first << " a " << elem.second << "\n";
-//    }
->>>>>>> c948539a9aafcf3b3b850ef6ce1b8e81e2a24a96
 }
