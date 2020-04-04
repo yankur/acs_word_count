@@ -9,7 +9,7 @@ std::unordered_map<std::string, size_t> count_words(const std::string& inp_strin
     std::string word;
     for (auto x : inp_string)
     {
-        if (isalpha(x)) {
+        if (!isalpha(x)) {
             dict_update(dict_of_words, word);
             word = "";
         }
