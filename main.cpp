@@ -4,7 +4,7 @@
 
 #include "merge.h"
 #include "count_words.h"
-#include "my_queue.h"
+#include "my_concurrent_queue.h"
 
 
 int main() {
@@ -22,22 +22,19 @@ int main() {
     count_words(dict1, buffer);
     count_words(dict2, buffer);
 
-    for(auto elem : dict1)
-    {
-        std::cout << elem.first << " " << elem.second << "\n";
-    }
+    ConcurrentQueue<std::unordered_map<std::string, size_t>> que;
+    que.push(dict1);
+    que.push(dict2);
 
-//    my_concurrent_que<std::unordered_map<std::string, size_t>> que;
-//    que.push(dict1);
-//    que.push(dict2);
-//
-//    auto d1 = que.pop();
-//    auto d2 = que.pop();
-//
-//    merge(d1, d2);
-//
-//    for(auto elem : d1)
-//    {
-//        std::cout << elem.first << " a " << elem.second << "\n";
-//    }
+    auto d1 = que.pop();
+    auto d2 = que.pop();
+
+    merge(d1, d2);
+
+    std::cout << "{";
+    for(auto elem : d1)
+    {
+        std::cout << "'" << elem.first << "': "  << elem.second << "\n";
+    }
+    std::cout << "}";
 }
