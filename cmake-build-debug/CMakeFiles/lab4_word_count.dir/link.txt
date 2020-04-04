@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab4_word_count.dir/count_words.cpp.o  -o lab4_word_count 
