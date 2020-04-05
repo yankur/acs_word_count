@@ -45,9 +45,13 @@ int main() {
 
     int tmp = 0;
     for (size_t i = 0; i < threads_num; ++i) {
-        tmp = next_nonalpha(buffer, part_size * (i + 1));
-        std::string buff_part = buffer.substr(i, tmp);
+        auto tmp_e = next_nonalpha(buffer, tmp + part_size);
+        std::cout << "part size: " << part_size << "\n";
+        std::cout << "tmp: " << tmp << "\n";
+        std::cout << "tmpe: " << tmp_e << "\n";
+        std::string buff_part = buffer.substr(tmp, tmp_e);
         v.emplace_back(count_words, std::ref(buff_part), std::ref(dicts_queue));
+        tmp = tmp_e;
     }
 
     auto d1 = dicts_queue.pop();
