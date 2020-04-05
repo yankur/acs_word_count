@@ -35,14 +35,19 @@ int main() {
     auto load_start_time = get_current_time_fenced();
 
     std::string buffer = read_file(config["infile"]);
-    auto loading_time = get_current_time_fenced() - load_start_time;
+    int part_size = int(buffer.size() / threads_num);
     auto count_start_time = get_current_time_fenced();
+    auto loading_time = get_current_time_fenced() - load_start_time;
+
 
     std::vector<std::thread> v;
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue;
 
+    int tmp = 0;
     for (size_t i = 0; i < threads_num; ++i) {
-        v.emplace_back(count_words, std::ref(buffer), std::ref(dicts_queue));
+        tmp = next_nonalpha(buffer, part_size * (i + 1));
+        std::string buff_part = buffer.substr(i, tmp);
+        v.emplace_back(count_words, std::ref(buff_part), std::ref(dicts_queue));
     }
 
     auto d1 = dicts_queue.pop();

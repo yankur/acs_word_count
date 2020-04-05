@@ -1,6 +1,8 @@
 #include "count_words.h"
 
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word);
+int next_nonalpha(const std::string &str, int current);
+
 
 void count_words(const std::string &inp_string, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
 
@@ -28,3 +30,7 @@ void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const s
     }
 }
 
+int next_nonalpha(const std::string &str, int current){
+    while (isalpha(str[current])) { ++current; }
+    return current;
+}
