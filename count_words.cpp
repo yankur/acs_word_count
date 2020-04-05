@@ -1,6 +1,4 @@
-#include <cctype>
-#include <unordered_map>
-#include <iostream>
+#include "count_words.h"
 
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word);
 
