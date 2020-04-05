@@ -6,7 +6,7 @@
 #include <atomic>
 
 #include "merge.h"
-#include "count_words_boost.h"
+#include "count_words.h"
 #include "my_concurrent_queue.h"
 #include "read_config.h"
 #include "write_result.h"
@@ -28,14 +28,17 @@ inline long long to_us(const D& d)
 }
 
 int main() {
-    auto config = read_conf();
+    auto config = read_conf("/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/config.dat");
     size_t threads_num = std::stoi(config["threads"]);
 
     auto start_time = get_current_time_fenced();
     auto load_start_time = get_current_time_fenced();
 
+//    reading whole file, return string
     std::string buffer = read_file(config["infile"]);
+//    part_size depends on number of threads string/n
     int part_size = int(buffer.size() / threads_num);
+//    set count time
     auto count_start_time = get_current_time_fenced();
     auto loading_time = get_current_time_fenced() - load_start_time;
 
@@ -45,9 +48,13 @@ int main() {
 
     int tmp = 0;
     for (size_t i = 0; i < threads_num; ++i) {
+//        getting index of next nonalpha char to split string
+//        tmp_e = index of end of next thread part
         auto tmp_e = next_nonalpha(buffer, tmp + part_size);
+//        cutting string start = tmp + 1
         std::string buff_part = buffer.substr(tmp, tmp_e-tmp);
-        v.emplace_back(count_words, std::ref(buff_part), std::ref(dicts_queue));
+        count_words(buff_part, dicts_queue);
+//        v.emplace_back(count_words, std::ref(buff_part), std::ref(dicts_queue));
         tmp = tmp_e;
     }
 
