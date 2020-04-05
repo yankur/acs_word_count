@@ -47,14 +47,15 @@ int main() {
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue;
 
     int tmp = 0;
+    int tmp_e = 0;
     for (size_t i = 0; i < threads_num; ++i) {
 //        getting index of next nonalpha char to split string
 //        tmp_e = index of end of next thread part
-        auto tmp_e = next_nonalpha(buffer, tmp + part_size);
+        tmp_e = next_nonalpha(buffer, tmp + part_size);
 //        cutting string start = tmp + 1
         std::string buff_part = buffer.substr(tmp, tmp_e-tmp);
-        count_words(buff_part, dicts_queue);
-//        v.emplace_back(count_words, std::ref(buff_part), std::ref(dicts_queue));
+//        count_words(buff_part, dicts_queue);
+        v.emplace_back(count_words, std::ref(buff_part), std::ref(dicts_queue));
         tmp = tmp_e;
     }
 
