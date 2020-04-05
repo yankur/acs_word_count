@@ -63,19 +63,25 @@ ConcurrentQueue<T>::ConcurrentQueue(ConcurrentQueue<T> const &queue) {
 template<typename T>
 void ConcurrentQueue<T>::push(T e)
 {
+    std::cout << "Pushing" << "\n";
     std::lock_guard<std::mutex> lg(m_m);
     ++size;
     NODE *ptr = new node;
     ptr->data = e;
     ptr->next = NULL;
     if(mHead == NULL) {
+        std::cout << "queue head is null(pushed)" << "\n";
         mHead = ptr;
+        cv_m.notify_one();
         return;
     }
     NODE *cur = mHead;
     while(cur) {
+        std::cout << "seeking for null..." << "\n";
         if(cur->next == NULL) {
             cur->next = ptr;
+            std::cout << "Gotcha!" << "\n";
+            cv_m.notify_one();
             return;
         }
         cur = cur->next;
@@ -85,19 +91,23 @@ void ConcurrentQueue<T>::push(T e)
 template<typename T>
 T ConcurrentQueue<T>::pop()
 {
+    std::cout << "popping" << "\n";
     std::unique_lock<std::mutex> lg(m_m);
     if(size == 0) {
+        std::cout << "queue size is 0" << "\n";
         cv_m.wait(lg);
     }
     if(mHead == NULL) {
+        std::cout << "queue head is null" << "\n";
         T t;
         return t;
     }
     NODE *tmp = mHead;
-    T d = mHead->data;
+    T res = mHead->data;
     mHead = mHead->next;
     delete tmp;
-    return d;
+    std::cout << "Popped!" << "\n";
+    return res;
 }
 
 #endif //LAB4_WORD_COUNT_MY_CONCURRENT_QUEUE_H
