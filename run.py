@@ -8,7 +8,7 @@ def main(n):
     time = []
     for threads in range(n):
         generate_config(threads)
-        out = subprocess.Popen(['./count', 'config.dat'],
+        out = subprocess.Popen(['./lab4_word_count'],
                                stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT)
         stdout, stderr = out.communicate()
@@ -20,7 +20,7 @@ def main(n):
 
 def test(threads):
     generate_config(threads)
-    out = subprocess.Popen(['./count', 'config.dat'],
+    out = subprocess.Popen(['./lab4_word_count', 'config.dat'],
                            stdout=subprocess.PIPE,
                            stderr=subprocess.STDOUT)
     stdout, stderr = out.communicate()
