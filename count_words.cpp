@@ -37,5 +37,5 @@ int next_nonalpha(const std::string &str, int current){
         }
         ++current;
     }
-    return current;
+    return str.size() - 1;
 }
