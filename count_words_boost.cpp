@@ -1,9 +1,10 @@
 #include <unordered_map>
 #include <boost/locale.hpp>
+#include "my_concurrent_queue.h"
 
 void dict_update(std::unordered_map<std::string, size_t> dict_of_words, const std::string& word);
 
-std::unordered_map<std::string, size_t> count_words(const std::string& inp_string) {
+void count_words(const std::string &inp_string, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
     std::unordered_map<std::string, size_t> dict_of_words;
 
     boost::locale::generator gen;
@@ -17,7 +18,7 @@ std::unordered_map<std::string, size_t> count_words(const std::string& inp_strin
     for(boost::locale::boundary::ssegment_index::iterator it=map.begin(),e=map.end();it!=e;++it)
         dict_update(dict_of_words, * it);
 
-    return dict_of_words;
+    queue.push(dict_of_words);
 }
 
 void dict_update(std::unordered_map<std::string, size_t> dict_of_words, const std::string& word) {
