@@ -5,7 +5,6 @@
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word);
 
 void count_words(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& inp_string) {
-    std::cout << "im counting..";
 
     std::string word = "";
     for (auto x : inp_string)
