@@ -18,6 +18,7 @@ class ConcurrentQueue
 public:
     ConcurrentQueue();
     ~ConcurrentQueue();
+    ConcurrentQueue(ConcurrentQueue<T> const &queue);
     void push(T e);
     T pop();
 private:
@@ -50,6 +51,13 @@ ConcurrentQueue<T>::~ConcurrentQueue()
         mHead = mHead->next;
         delete tmp;
     }
+}
+
+
+template <typename T>
+ConcurrentQueue<T>::ConcurrentQueue(ConcurrentQueue<T> const &queue) {
+    mHead = queue.mHead;
+    size = queue.size;
 }
 
 template<typename T>
