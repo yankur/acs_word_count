@@ -91,6 +91,7 @@ void ConcurrentQueue<T>::push(T e)
 template<typename T>
 T ConcurrentQueue<T>::pop()
 {
+    size--;
     std::cout << "popping" << "\n";
     std::unique_lock<std::mutex> lg(m_m);
     if(size == 0) {

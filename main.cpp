@@ -58,9 +58,15 @@ int main() {
         tmp = tmp_e;
     }
 
+    for(auto& t: v){
+        t.join();
+    }
+
     auto d1 = dicts_queue.pop();
-    auto d2 = dicts_queue.pop();
-    merge(d1, d2);
+    for (int i = 0; i < threads_num-1; ++i) {
+        auto d2 = dicts_queue.pop();
+        merge(d1, d2);
+    }
 
     auto count_time = get_current_time_fenced() - count_start_time;
 
