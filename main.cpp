@@ -6,7 +6,7 @@
 #include <atomic>
 
 #include "merge.h"
-#include "count_words.h"
+#include "count_words_boost.h"
 #include "my_concurrent_queue.h"
 #include "read_config.h"
 #include "write_result.h"
@@ -46,10 +46,7 @@ int main() {
     int tmp = 0;
     for (size_t i = 0; i < threads_num; ++i) {
         auto tmp_e = next_nonalpha(buffer, tmp + part_size);
-        std::cout << "part size: " << part_size << "\n";
-        std::cout << "tmp: " << tmp << "\n";
-        std::cout << "tmpe: " << tmp_e << "\n";
-        std::string buff_part = buffer.substr(tmp, tmp_e);
+        std::string buff_part = buffer.substr(tmp, tmp_e-tmp);
         v.emplace_back(count_words, std::ref(buff_part), std::ref(dicts_queue));
         tmp = tmp_e;
     }
