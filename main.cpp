@@ -32,9 +32,11 @@ int main() {
     size_t threads_num = std::stoi(config["threads"]);
 
     auto start_time = get_current_time_fenced();
+    auto load_start_time = get_current_time_fenced();
 
     std::string buffer = read_file(config["infile"]);
-    auto loading_time = get_current_time_fenced() - start_time;
+    auto loading_time = get_current_time_fenced() - load_start_time;
+    auto count_start_time = get_current_time_fenced();
 
     std::vector<std::thread> v;
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue;
@@ -47,15 +49,14 @@ int main() {
     auto d2 = dicts_queue.pop();
     merge(d1, d2);
 
-    auto count_time = get_current_time_fenced() - loading_time;
+    auto count_time = get_current_time_fenced() - count_start_time;
 
     write_result(d1, config["out_by_a"], "key");
     write_result(d1, config["out_by_n"], "val");
 
     auto total_time = get_current_time_fenced() - start_time;
 
-    std::cout << "Loading: " << to_us(loading_time) << "\nAnalyzing: "
-    << to_us(count_time) << "\nTotal: " << to_us(total__time) << std::endl;
+    std::cout << "Loading: " << to_us(loading_time) << "\nAnalyzing: " << to_us(count_time) << "\nTotal: " << to_us(total_time) << std::endl;
 
     return 0;
 }
