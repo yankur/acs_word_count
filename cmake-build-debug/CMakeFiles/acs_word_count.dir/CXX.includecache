@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hryts/UCU/22/aks/acs_word_count/count_words.h
+ctype.h
+-
+string
+-
+map
+-
+
+/home/hryts/UCU/22/aks/acs_word_count/main.cpp
+sstream
+-
+fstream
+-
+iostream
+-
+count_words.h
+/home/hryts/UCU/22/aks/acs_word_count/count_words.h
+

@@ -3,8 +3,9 @@
 #include "my_concurrent_queue.h"
 
 void dict_update(std::unordered_map<std::string, size_t> dict_of_words, const std::string& word);
+int next_nonalpha(const std::string &str, int current);
 
-void count_words(const std::string &inp_string, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
+void count_words(const std::string inp_string, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
     std::unordered_map<std::string, size_t> dict_of_words;
 
     boost::locale::generator gen;
@@ -30,4 +31,14 @@ void dict_update(std::unordered_map<std::string, size_t> dict_of_words, const st
         size_t val = 1;
         itr->second = val;
     }
+}
+
+int next_nonalpha(const std::string &str, int current){
+    while (current < str.size()) {
+        if (!isalpha(str[current])) {
+            return current;
+        }
+        ++current;
+    }
+    return str.size() - 1;
 }

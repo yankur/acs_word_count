@@ -1,0 +1,19 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/bin/gcc -DCMAKE_CXX_COMPILER=/bin/g++ -G "CodeBlocks - Unix Makefiles" /home/hryts/UCU/22/aks/acs_word_count1
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /bin/gcc
+-- Check for working C compiler: /bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /bin/g++
+-- Check for working CXX compiler: /bin/g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Boost: /usr/lib64/cmake/Boost-1.72.0/BoostConfig.cmake (found version "1.72.0") found components: filesystem locale system 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hryts/UCU/22/aks/acs_word_count1

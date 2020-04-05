@@ -1,0 +1,1 @@
+/bin/g++  -O3 -Wall -Wextra -g   CMakeFiles/lab4_word_count.dir/count_words.cpp.o CMakeFiles/lab4_word_count.dir/main.cpp.o CMakeFiles/lab4_word_count.dir/merge.cpp.o CMakeFiles/lab4_word_count.dir/my_queue.cpp.o CMakeFiles/lab4_word_count.dir/read_config.cpp.o  -o lab4_word_count 

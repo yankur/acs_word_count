@@ -11,7 +11,7 @@
 
 std::string read_file(std::string filename) {
     std::cout << "Reading file.." << "\n";
-    std::string file_to_read = "/home/hryts/UCU/22/aks/acs_word_count/" + filename;
+    std::string file_to_read = filename;
     std::ifstream raw_file(file_to_read, std::ios::binary);
     std::ostringstream buffer_ss;
     buffer_ss << raw_file.rdbuf();

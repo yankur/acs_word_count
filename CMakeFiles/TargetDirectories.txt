@@ -1,0 +1,3 @@
+/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/rebuild_cache.dir
+/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir
+/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/edit_cache.dir
