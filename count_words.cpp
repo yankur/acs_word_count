@@ -31,6 +31,11 @@ void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const s
 }
 
 int next_nonalpha(const std::string &str, int current){
-    while (isalpha(str[current])) { ++current; }
+    while (current < str.size()) {
+        if (!isalpha(str[current])) {
+            return current;
+        }
+        ++current;
+    }
     return current;
 }
