@@ -21,6 +21,7 @@ public:
     ConcurrentQueue(ConcurrentQueue<T> const &queue);
     void push(T e);
     T pop();
+    size_t get_size();
 private:
     struct node
     {
@@ -91,7 +92,6 @@ void ConcurrentQueue<T>::push(T e)
 template<typename T>
 T ConcurrentQueue<T>::pop()
 {
-    size--;
     std::cout << "popping" << "\n";
     std::unique_lock<std::mutex> lg(m_m);
     if(size == 0) {
@@ -108,7 +108,13 @@ T ConcurrentQueue<T>::pop()
     mHead = mHead->next;
     delete tmp;
     std::cout << "Popped!" << "\n";
+    size--;
     return res;
+}
+
+template<typename T>
+size_t ConcurrentQueue<T>::get_size() {
+    return size;
 }
 
 #endif //LAB4_WORD_COUNT_MY_CONCURRENT_QUEUE_H

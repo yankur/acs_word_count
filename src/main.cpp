@@ -6,7 +6,7 @@
 #include <atomic>
 
 #include "merge.h"
-#include "count_words.h"
+#include "count_words_boost.h"
 #include "my_concurrent_queue.h"
 #include "read_config.h"
 #include "write_result.h"
@@ -64,6 +64,8 @@ int main() {
 
     count_words(buffer, std::ref(dicts_queue));
 
+    std::cout << dicts_queue.get_size() << std::endl;
+
     auto d1 = dicts_queue.pop();
 
 //    for (int i = 0; i < threads_num; ++i) {
@@ -74,7 +76,7 @@ int main() {
     auto count_time = get_current_time_fenced() - count_start_time;
 
     write_result(d1, config["out_by_a"], "key");
-//    write_result(d1, config["out_by_n"], "val");
+    write_result(d1, config["out_by_n"], "val");
 
     auto total_time = get_current_time_fenced() - start_time;
 
