@@ -24,7 +24,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 SET(CMAKE_CXX_FLAGS -pthread)
 
 find_package( Boost REQUIRED COMPONENTS)
-find_package(LibArchive REQUIRED)
+#find_package(LibArchive REQUIRED)
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
 #find_package (LibArchive REQUIRED)
