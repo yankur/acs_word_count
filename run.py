@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 def main(n):
     min_time = 1000000
     time = []
-    for threads in range(n):
+    for threads in range(1, n):
         generate_config(threads)
         out = subprocess.Popen(['./lab4_word_count'],
                                stdout=subprocess.PIPE,

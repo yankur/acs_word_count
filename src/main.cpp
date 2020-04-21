@@ -28,7 +28,7 @@ inline long long to_us(const D& d)
 }
 
 int main() {
-    auto config = read_conf("/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/config.dat");
+    auto config = read_conf();
     size_t threads_num = std::stoi(config["threads"]);
 
     auto start_time = get_current_time_fenced();
@@ -59,9 +59,15 @@ int main() {
         tmp = tmp_e;
     }
 
+    for(auto& t: v){
+        t.join();
+    }
+
     auto d1 = dicts_queue.pop();
-    auto d2 = dicts_queue.pop();
-    merge(d1, d2);
+    for (int i = 0; i < threads_num-1; ++i) {
+        auto d2 = dicts_queue.pop();
+        merge(d1, d2);
+    }
 
     auto count_time = get_current_time_fenced() - count_start_time;
 
