@@ -33,6 +33,7 @@ private:
     std::mutex m_m;
     std::condition_variable cv_m;
     size_t size;
+    bool poisoned;
 };
 
 // template definition
@@ -41,6 +42,7 @@ ConcurrentQueue<T>::ConcurrentQueue()
 {
     mHead = NULL;
     size = 0;
+    poisoned = false;
 }
 
 template<typename T>
@@ -54,34 +56,24 @@ ConcurrentQueue<T>::~ConcurrentQueue()
     }
 }
 
-
-template <typename T>
-ConcurrentQueue<T>::ConcurrentQueue(ConcurrentQueue<T> const &queue) {
-    mHead = queue.mHead;
-    size = queue.size;
-}
-
 template<typename T>
 void ConcurrentQueue<T>::push(T e)
 {
-    std::cout << "Pushing" << "\n";
     std::lock_guard<std::mutex> lg(m_m);
-    ++size;
     NODE *ptr = new node;
     ptr->data = e;
     ptr->next = NULL;
     if(mHead == NULL) {
-        std::cout << "queue head is null(pushed)" << "\n";
         mHead = ptr;
+        ++size;
         cv_m.notify_one();
         return;
     }
     NODE *cur = mHead;
     while(cur) {
-        std::cout << "seeking for null..." << "\n";
         if(cur->next == NULL) {
             cur->next = ptr;
-            std::cout << "Gotcha!" << "\n";
+            ++size;
             cv_m.notify_one();
             return;
         }
@@ -92,22 +84,18 @@ void ConcurrentQueue<T>::push(T e)
 template<typename T>
 T ConcurrentQueue<T>::pop()
 {
-    std::cout << "popping" << "\n";
     std::unique_lock<std::mutex> lg(m_m);
     if(size == 0) {
-        std::cout << "queue size is 0" << "\n";
+        if (poisoned) {
+            T res;
+            return res;
+        }
         cv_m.wait(lg);
-    }
-    if(mHead == NULL) {
-        std::cout << "queue head is null" << "\n";
-        T t;
-        return t;
     }
     NODE *tmp = mHead;
     T res = mHead->data;
     mHead = mHead->next;
     delete tmp;
-    std::cout << "Popped!" << "\n";
     size--;
     return res;
 }

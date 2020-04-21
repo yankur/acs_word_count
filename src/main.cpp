@@ -29,11 +29,10 @@ inline long long to_us(const D& d)
 
 int main() {
     auto config = read_conf();
-//    size_t threads_num = std::stoi(config["threads"]);
+    size_t threads_num = std::stoi(config["threads"]);
 
     auto start_time = get_current_time_fenced();
     auto load_start_time = get_current_time_fenced();
-
 //    reading whole file, return string
     std::string buffer = read_file(config["infile"]);
 //    part_size depends on number of threads string/n
@@ -63,8 +62,6 @@ int main() {
 //    }
 
     count_words(buffer, std::ref(dicts_queue));
-
-    std::cout << dicts_queue.get_size() << std::endl;
 
     auto d1 = dicts_queue.pop();
 
