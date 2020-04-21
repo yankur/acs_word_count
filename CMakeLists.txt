@@ -25,21 +25,21 @@ find_package( Boost REQUIRED COMPONENTS filesystem locale system)
 
 
 add_executable(lab4_word_count
-        read_file.cpp
-        read_file.h
-        count_words.cpp
-        count_words.h
-        main.cpp
-        main.h
-        merge.cpp
-        merge.h
-        read_config.cpp
-        read_config.h
-        my_concurrent_queue.h
-        write_result.cpp
-        write_result.h
-        unpack.cpp
-        unpack.h)
+        src/read_file.cpp
+        src/read_file.h
+        src/count_words.cpp
+        src/count_words.h
+        src/main.cpp
+        src/main.h
+        src/merge.cpp
+        src/merge.h
+        src/read_config.cpp
+        src/read_config.h
+        src/my_concurrent_queue.h
+        src/write_result.cpp
+        src/write_result.h
+        src/unpack.cpp
+        src/unpack.h)
 
 target_link_libraries(lab4_word_count LINK_PUBLIC ${Boost_LIBRARIES})
 target_include_directories(lab4_word_count PRIVATE ${Boost_INCLUDE_DIRS})

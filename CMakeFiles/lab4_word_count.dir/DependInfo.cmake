@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hryts/UCU/22/aks/acs_word_count1/count_words.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/count_words.cpp.o"
-  "/home/hryts/UCU/22/aks/acs_word_count1/main.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/main.cpp.o"
-  "/home/hryts/UCU/22/aks/acs_word_count1/merge.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/merge.cpp.o"
-  "/home/hryts/UCU/22/aks/acs_word_count1/read_config.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/read_config.cpp.o"
-  "/home/hryts/UCU/22/aks/acs_word_count1/read_file.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/read_file.cpp.o"
-  "/home/hryts/UCU/22/aks/acs_word_count1/unpack.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/unpack.cpp.o"
-  "/home/hryts/UCU/22/aks/acs_word_count1/write_result.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/write_result.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/count_words.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/main.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/merge.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/read_file.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/src/read_file.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/unpack.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/write_result.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

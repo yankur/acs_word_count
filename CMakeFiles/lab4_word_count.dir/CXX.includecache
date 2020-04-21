@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/hryts/UCU/22/aks/acs_word_count1/count_words.cpp
+/home/hryts/UCU/22/aks/acs_word_count1/src/count_words.cpp
 count_words.h
-/home/hryts/UCU/22/aks/acs_word_count1/count_words.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/count_words.h
 
-/home/hryts/UCU/22/aks/acs_word_count1/count_words.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/count_words.h
 cctype
 -
 unordered_map
 -
 my_concurrent_queue.h
-/home/hryts/UCU/22/aks/acs_word_count1/my_concurrent_queue.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/my_concurrent_queue.h
 
-/home/hryts/UCU/22/aks/acs_word_count1/main.cpp
+/home/hryts/UCU/22/aks/acs_word_count1/src/main.cpp
 sstream
 -
 fstream
@@ -32,23 +32,29 @@ chrono
 atomic
 -
 merge.h
-/home/hryts/UCU/22/aks/acs_word_count1/merge.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/merge.h
 count_words.h
-/home/hryts/UCU/22/aks/acs_word_count1/count_words.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/count_words.h
 my_concurrent_queue.h
-/home/hryts/UCU/22/aks/acs_word_count1/my_concurrent_queue.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/my_concurrent_queue.h
 read_config.h
-/home/hryts/UCU/22/aks/acs_word_count1/read_config.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.h
 write_result.h
-/home/hryts/UCU/22/aks/acs_word_count1/write_result.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/write_result.h
 read_file.h
-/home/hryts/UCU/22/aks/acs_word_count1/read_file.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_file.h
 
-/home/hryts/UCU/22/aks/acs_word_count1/merge.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/merge.cpp
+iostream
+-
+merge.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/merge.h
+
+/home/hryts/UCU/22/aks/acs_word_count1/src/merge.h
 unordered_map
 -
 
-/home/hryts/UCU/22/aks/acs_word_count1/my_concurrent_queue.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/my_concurrent_queue.h
 iostream
 -
 mutex
@@ -56,7 +62,15 @@ mutex
 condition_variable
 -
 
-/home/hryts/UCU/22/aks/acs_word_count1/read_config.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.cpp
+iostream
+-
+fstream
+-
+read_config.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.h
+
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.h
 unordered_map
 -
 functional
@@ -64,7 +78,35 @@ functional
 algorithm
 -
 
-/home/hryts/UCU/22/aks/acs_word_count1/read_file.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_file.cpp
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+read_file.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_file.h
 
-/home/hryts/UCU/22/aks/acs_word_count1/write_result.h
+/home/hryts/UCU/22/aks/acs_word_count1/src/read_file.h
+
+/home/hryts/UCU/22/aks/acs_word_count1/src/unpack.cpp
+
+/home/hryts/UCU/22/aks/acs_word_count1/src/write_result.cpp
+unordered_map
+-
+fstream
+-
+iostream
+-
+vector
+-
+boost/function.hpp
+-
+set
+-
+
+/home/hryts/UCU/22/aks/acs_word_count1/src/write_result.h
 
