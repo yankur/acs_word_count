@@ -15,7 +15,7 @@ std::unordered_map<std::string, std::string> read_conf(const std::string &conf_f
             while (getline(in, s)) {
                 s.erase(std::remove_if(s.begin(), s.end(), isspace), s.end());
                 auto eq = s.find('=');
-                auto qu = s.find('"') + 1;
+                auto qu = s.find('"');
 
                 if (s.empty() || eq == std::string::npos) {
                     continue;
@@ -23,10 +23,10 @@ std::unordered_map<std::string, std::string> read_conf(const std::string &conf_f
 
                 auto name = s.substr(0, eq);
                 std::string val;
-                if (name != "threads") {
-                    val = s.substr(qu, s.size()-qu-1);
+                if (name != "threads" && name != "max_words") {
+                    val = s.substr(qu+1, s.size()-qu-2);
                 } else {
-                    val = s.substr(eq + 1);
+                    val = s.substr(eq+1, s.size()-eq);
                 }
                 res[name] = val;
             }

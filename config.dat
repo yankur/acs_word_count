@@ -2,3 +2,4 @@ infile="../bible.txt"
 out_by_a="../data/res_a.txt"
 out_by_n="../data/res_n.txt"
 threads=1
+max_words=150000

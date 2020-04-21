@@ -29,6 +29,7 @@ inline long long to_us(const D& d)
 
 int main() {
     auto config = read_conf();
+    std::cout << config["max_words"] << std::endl;
     size_t threads_num = std::stoi(config["threads"]);
 
     auto start_time = get_current_time_fenced();
