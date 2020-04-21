@@ -1,3 +1,0 @@
-/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir
