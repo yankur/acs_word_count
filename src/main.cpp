@@ -4,6 +4,7 @@
 #include <thread>
 #include <chrono>
 #include <atomic>
+#include <vector>
 
 #include "merge.h"
 #include "count_words.h"
@@ -35,7 +36,7 @@ int main() {
 //    auto content = read_archive(file.c_str());
 
     auto config = read_conf();
-    size_t threads_num=std::stoi(config["threads"]);
+//    size_t threads_num=std::stoi(config["threads"]);
     size_t indexing_threads=std::stoi(config["indexing_threads"]);
     size_t max_words=std::stoi(config["max_words"]);
     size_t queue_limit=std::stoi(config["queue_limit"]);
@@ -61,10 +62,7 @@ int main() {
         auto d2 = dicts_queue.pop();
         merge(d1, d2);
     }
-//    for (int i = 0; i < threads_num; ++i) {
-//        auto d2 = dicts_queue.pop();
-//        merge(d1, d2);
-//    }
+
     auto total_time = get_current_time_fenced() - start_time;
 
     write_result(d1, config["out_by_a"], "key");
