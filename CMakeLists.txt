@@ -54,7 +54,8 @@ add_executable(lab4_word_count
         src/unpack.cpp
         src/unpack.h
         src/divide_and_push.cpp
-        src/divide_and_push.h src/list_contents.cpp src/list_contents.h)
+        src/divide_and_push.h src/list_contents.cpp src/list_contents.h src/divide_and_push.cpp src/divide_and_push.h src/read_by_words.cpp src/read_by_words.h)
+
 
 
 target_link_libraries (lab4_word_count ${LibArchive})
