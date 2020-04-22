@@ -5,6 +5,9 @@ CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words.cpp
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
+CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.o
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/divide_and_push.cpp
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp
@@ -12,6 +15,7 @@ CMakeFiles/lab4_word_count.dir/src/main.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_file.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.h
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp
@@ -24,6 +28,7 @@ CMakeFiles/lab4_word_count.dir/src/read_file.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_file.h
 CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.cpp
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.h
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp
  /usr/local/boost_1_72_0/boost/assert.hpp

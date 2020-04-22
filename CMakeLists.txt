@@ -6,8 +6,8 @@ SET(CMAKE_CXX_STANDARD 17)
 #    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 #    set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0")
 #ENDIF(CMAKE_COMPILER_IS_GNUCC)
-set(CMAKE_CXX_FLAGS "-g")
-set(CMAKE_CXX_FLAGS_DEBUG "-g")
+#set(CMAKE_CXX_FLAGS "-g")
+#set(CMAKE_CXX_FLAGS_DEBUG "-g")
 #if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 #    # for Clang and AppleClang
 #    set( CMAKE_CXX_FLAGS "-Ofast" )
@@ -27,8 +27,14 @@ find_package( Boost REQUIRED COMPONENTS)
 #find_package(LibArchive REQUIRED)
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
+if (WIN32)
+    find_library( LibArchive NAMES libarchive.dll )
+elseif(APPLE)
+    find_library( LibArchive NAMES libarchive.dylib )
+else()
+    find_library( LibArchive NAMES libarchive.so )
+endif ()
 #find_package (LibArchive REQUIRED)
-#target_link_libraries (unpack.cpp, LibArchive_LIBRARIES)
 
 
 add_executable(lab4_word_count
@@ -46,7 +52,11 @@ add_executable(lab4_word_count
         src/write_result.cpp
         src/write_result.h
         src/unpack.cpp
-        src/unpack.h src/divide_and_push.cpp src/divide_and_push.h)
+        src/unpack.h
+        src/divide_and_push.cpp
+        src/divide_and_push.h src/list_contents.cpp src/list_contents.h)
 
+
+target_link_libraries (lab4_word_count ${LibArchive})
 target_link_libraries(lab4_word_count LINK_PUBLIC ${Boost_LIBRARIES})
 target_include_directories(lab4_word_count PRIVATE ${Boost_INCLUDE_DIRS})

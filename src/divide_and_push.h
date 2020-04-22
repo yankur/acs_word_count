@@ -8,6 +8,6 @@
 #include <string>
 #include "my_concurrent_queue.h"
 
-void divide_and_push(size_t max_words, const std::string& inp_string, ConcurrentQueue<std::string>& substring_queue) {}
+void divide_and_push(const size_t max_words, const std::string& inp_string, ConcurrentQueue<std::string>& substring_queue) {}
 
 #endif //LAB4_WORD_COUNT_DIVIDE_AND_PUSH_H

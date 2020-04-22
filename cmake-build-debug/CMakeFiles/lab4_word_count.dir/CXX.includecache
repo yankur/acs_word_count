@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words.cpp
-count_words.h
-/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words.h
-
-/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words.h
-cctype
--
-unordered_map
--
-my_concurrent_queue.h
-/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
-
 /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.h
 ctype.h
 -
@@ -55,6 +43,8 @@ write_result.h
 /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.h
 read_file.h
 /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_file.h
+unpack.h
+/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.h
 
 /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.h
 unordered_map
@@ -77,6 +67,14 @@ algorithm
 -
 
 /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_file.h
+
+/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.h
+archive.h
+-
+archive_entry.h
+-
+string
+-
 
 /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.h
 
