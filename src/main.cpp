@@ -63,6 +63,10 @@ int main() {
         merge(d1, d2);
     }
 
+    for(int i=0;i<indexing_threads;++i){
+        indexers[i].join();
+    }
+
     auto total_time = get_current_time_fenced() - start_time;
 
     write_result(d1, config["out_by_a"], "key");

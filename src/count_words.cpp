@@ -7,6 +7,7 @@ int next_nonalpha(const std::string &str, int current);
 void count_words(ConcurrentQueue<std::string>& inp_queue, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
     std::string inp_string = inp_queue.pop();
     if(inp_queue.is_poisoned()&&inp_string.size()==0){
+        std::cout<<"";
         return;
     }
     std::cout << "Counting started.." << std::endl;
