@@ -23,7 +23,7 @@ std::unordered_map<std::string, std::string> read_conf(const std::string &conf_f
 
                 auto name = s.substr(0, eq);
                 std::string val;
-                if (name != "threads" && name != "max_words") {
+                if (name!="threads"&&name!="max_words"&&name!="indexing_threads"&&name!="queue_limit") {
                     val = s.substr(qu+1, s.size()-qu-2);
                 } else {
                     val = s.substr(eq+1, s.size()-eq);

@@ -16,12 +16,13 @@ template<typename T>
 class ConcurrentQueue
 {
 public:
-    ConcurrentQueue();
+    explicit ConcurrentQueue(size_t lim);
     ~ConcurrentQueue();
-    ConcurrentQueue(ConcurrentQueue<T> const &queue);
     void push(T e);
     T pop();
     size_t get_size();
+    void poison();
+    bool is_poisoned();
 private:
     struct node
     {
@@ -31,18 +32,21 @@ private:
     typedef node NODE;
     NODE* mHead;
     std::mutex m_m;
-    std::condition_variable cv_m;
+    std::condition_variable for_pop;
+    std::condition_variable for_push;
     size_t size;
+    size_t limit;
     bool poisoned;
 };
 
 // template definition
 template<typename T>
-ConcurrentQueue<T>::ConcurrentQueue()
+ConcurrentQueue<T>::ConcurrentQueue(size_t lim)
 {
     mHead = NULL;
     size = 0;
     poisoned = false;
+    limit = lim;
 }
 
 template<typename T>
@@ -59,14 +63,17 @@ ConcurrentQueue<T>::~ConcurrentQueue()
 template<typename T>
 void ConcurrentQueue<T>::push(T e)
 {
-    std::lock_guard<std::mutex> lg(m_m);
+    std::unique_lock<std::mutex> lg(m_m);
+    if(size>=limit){
+        for_push.wait(lg);
+    }
     NODE *ptr = new node;
     ptr->data = e;
     ptr->next = NULL;
     if(mHead == NULL) {
         mHead = ptr;
         ++size;
-        cv_m.notify_one();
+        for_pop.notify_one();
         return;
     }
     NODE *cur = mHead;
@@ -74,7 +81,7 @@ void ConcurrentQueue<T>::push(T e)
         if(cur->next == NULL) {
             cur->next = ptr;
             ++size;
-            cv_m.notify_one();
+            for_pop.notify_one();
             return;
         }
         cur = cur->next;
@@ -90,19 +97,30 @@ T ConcurrentQueue<T>::pop()
             T res;
             return res;
         }
-        cv_m.wait(lg);
+        for_pop.wait(lg);
     }
     NODE *tmp = mHead;
     T res = mHead->data;
     mHead = mHead->next;
     delete tmp;
     size--;
+    for_push.notify_one();
     return res;
 }
 
 template<typename T>
 size_t ConcurrentQueue<T>::get_size() {
     return size;
+}
+
+template<typename T>
+void ConcurrentQueue<T>::poison() {
+    poisoned=true;
+}
+
+template<typename T>
+bool ConcurrentQueue<T>::is_poisoned() {
+    return poisoned;
 }
 
 #endif //LAB4_WORD_COUNT_MY_CONCURRENT_QUEUE_H

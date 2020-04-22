@@ -15,6 +15,7 @@ void read_by_words(std::string& filename, ConcurrentQueue<std::string> &strings_
     size_t counter = 0;
     while(file>>word){
         if(counter==max_words){
+            std::cout<<"part pushed"<<std::endl;
             strings_queue.push(part);
             counter=0;
         }
@@ -24,4 +25,5 @@ void read_by_words(std::string& filename, ConcurrentQueue<std::string> &strings_
     if(part.size()>0){
         strings_queue.push(part);
     }
+    strings_queue.poison();
 }

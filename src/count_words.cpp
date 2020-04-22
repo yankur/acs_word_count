@@ -4,9 +4,12 @@ void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const s
 int next_nonalpha(const std::string &str, int current);
 
 
-void count_words(const std::string& inp_string, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
-
-    std::cout << "Counting started.." << "\n";
+void count_words(ConcurrentQueue<std::string>& inp_queue, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
+    std::string inp_string = inp_queue.pop();
+    if(inp_queue.is_poisoned()&&inp_string.size()==0){
+        return;
+    }
+    std::cout << "Counting started.." << std::endl;
 
     std::unordered_map<std::string, size_t> dict_of_words;
     std::string word = "";
@@ -20,6 +23,7 @@ void count_words(const std::string& inp_string, ConcurrentQueue<std::unordered_m
     }
     std::cout << "Counting finished. Start pushing.." << "\n";
     queue.push(dict_of_words);
+    count_words(inp_queue, queue);
 }
 
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word) {
