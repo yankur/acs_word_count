@@ -11,6 +11,7 @@
 #include "read_config.h"
 #include "write_result.h"
 #include "read_file.h"
+#include "read_by_words.h"
 
 
 inline std::chrono::high_resolution_clock::time_point get_current_time_fenced()
@@ -29,16 +30,19 @@ inline long long to_us(const D& d)
 
 int main() {
     auto config = read_conf();
-    std::cout << config["max_words"] << std::endl;
     size_t threads_num = std::stoi(config["threads"]);
 
     auto start_time = get_current_time_fenced();
-    std::string buffer = read_file(config["infile"]);
+//    std::string buffer = read_file(config["infile"]);
 //    part_size depends on max words number in config
 
 
 //    std::vector<std::thread> v;
     ConcurrentQueue<std::string> substring_queue;
+    read_by_words(config["infile"], substring_queue,std::stoi(config["max_words"]));
+    std::cout<<"read"<<std::endl;
+    std::cout << substring_queue.pop();
+
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue;
 
 
@@ -58,7 +62,7 @@ int main() {
 //    for(auto& t: v){
 //        t.join();
 //    }
-    count_words(buffer, std::ref(dicts_queue));
+//    count_words(buffer, std::ref(dicts_queue));
 
     auto d1 = dicts_queue.pop();
 

@@ -46,7 +46,7 @@ add_executable(lab4_word_count
         src/write_result.cpp
         src/write_result.h
         src/unpack.cpp
-        src/unpack.h src/divide_and_push.cpp src/divide_and_push.h)
+        src/unpack.h src/divide_and_push.cpp src/divide_and_push.h src/read_by_words.cpp src/read_by_words.h)
 
 target_link_libraries(lab4_word_count LINK_PUBLIC ${Boost_LIBRARIES})
 target_include_directories(lab4_word_count PRIVATE ${Boost_INCLUDE_DIRS})
