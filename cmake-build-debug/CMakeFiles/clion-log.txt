@@ -1,4 +1,8 @@
 /snap/clion/111/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/kurlyana/UCU/SEM4/ACS/lab4_word_count
--- Configuring done
--- Generating done
--- Build files have been written to: /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug
+CMake Error at CMakeLists.txt:59:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "=======".
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/CMakeOutput.log".

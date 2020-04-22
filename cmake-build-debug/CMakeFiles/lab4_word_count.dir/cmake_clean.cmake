@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o"
   "CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.o"
+  "CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.o"
   "CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
   "CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
   "CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"

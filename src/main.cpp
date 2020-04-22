@@ -11,6 +11,7 @@
 #include "read_config.h"
 #include "write_result.h"
 #include "read_file.h"
+#include "unpack.h"
 #include "read_by_words.h"
 
 
@@ -29,6 +30,10 @@ inline long long to_us(const D& d)
 }
 
 int main() {
+//    std::cout << "main" << std::endl;
+//    std::string file = "../bible.zip";
+//    auto content = read_archive(file.c_str());
+
     auto config = read_conf();
     size_t threads_num=std::stoi(config["threads"]);
     size_t indexing_threads=std::stoi(config["indexing_threads"]);

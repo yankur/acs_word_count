@@ -5,7 +5,7 @@
 #include <string>
 #include "my_concurrent_queue.h"
 
-void divide_and_push(size_t max_words, const std::string& inp_string, ConcurrentQueue<std::string>& substring_queue) {
+void divide_and_push(const size_t max_words, const std::string& inp_string, ConcurrentQueue<std::string>& substring_queue) {
     size_t count_words = 0;
     size_t count_chars = 0;
     size_t zero_index = 0;

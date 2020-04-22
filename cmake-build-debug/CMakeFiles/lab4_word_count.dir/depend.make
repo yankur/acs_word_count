@@ -5,12 +5,16 @@ CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o: ../src/count_words.cpp
 CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o: ../src/count_words.h
 CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o: ../src/my_concurrent_queue.h
 
+CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.o: ../src/divide_and_push.cpp
+CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.o: ../src/my_concurrent_queue.h
+
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/count_words_boost.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/merge.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/my_concurrent_queue.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/read_config.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/read_file.h
+CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/unpack.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/write_result.h
 
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.o: ../src/merge.cpp
@@ -23,6 +27,7 @@ CMakeFiles/lab4_word_count.dir/src/read_file.cpp.o: ../src/read_file.cpp
 CMakeFiles/lab4_word_count.dir/src/read_file.cpp.o: ../src/read_file.h
 
 CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o: ../src/unpack.cpp
+CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o: ../src/unpack.h
 
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o: ../src/write_result.cpp
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o: /usr/local/boost_1_72_0/boost/assert.hpp

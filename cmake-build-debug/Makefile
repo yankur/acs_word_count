@@ -177,6 +177,33 @@ src/divide_and_push.cpp.s:
 	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.s
 .PHONY : src/divide_and_push.cpp.s
 
+src/list_contents.o: src/list_contents.cpp.o
+
+.PHONY : src/list_contents.o
+
+# target to build an object file
+src/list_contents.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.o
+.PHONY : src/list_contents.cpp.o
+
+src/list_contents.i: src/list_contents.cpp.i
+
+.PHONY : src/list_contents.i
+
+# target to preprocess a source file
+src/list_contents.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.i
+.PHONY : src/list_contents.cpp.i
+
+src/list_contents.s: src/list_contents.cpp.s
+
+.PHONY : src/list_contents.s
+
+# target to generate assembly for a file
+src/list_contents.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.s
+.PHONY : src/list_contents.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -354,6 +381,9 @@ help:
 	@echo "... src/divide_and_push.o"
 	@echo "... src/divide_and_push.i"
 	@echo "... src/divide_and_push.s"
+	@echo "... src/list_contents.o"
+	@echo "... src/list_contents.i"
+	@echo "... src/list_contents.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

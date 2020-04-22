@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/divide_and_push.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.o"
+  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/list_contents.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"
