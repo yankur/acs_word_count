@@ -38,6 +38,7 @@ void count_words(ConcurrentQueue<std::string>& inp_queue, ConcurrentQueue<std::u
 }
 
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word) {
+    if(word.empty()){ return;}
     if (dict_of_words.find(word) == dict_of_words.end()) {
         dict_of_words[word] = 1;
     } else {

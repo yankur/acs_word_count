@@ -36,7 +36,7 @@ int main() {
 //    auto content = read_archive(file.c_str());
 
     auto config = read_conf();
-//    size_t threads_num=std::stoi(config["threads"]);
+    size_t merging_threads=std::stoi(config["threads"]);
     size_t indexing_threads=std::stoi(config["indexing_threads"]);
     size_t max_words=std::stoi(config["max_words"]);
     size_t queue_limit=std::stoi(config["queue_limit"]);
@@ -44,6 +44,7 @@ int main() {
     auto start_time = get_current_time_fenced();
 
     std::vector<std::thread> indexers;
+    std::vector<std::thread> mergeres;
     ConcurrentQueue<std::string> substring_queue(queue_limit);
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue(queue_limit);
 
@@ -53,16 +54,18 @@ int main() {
 
     read_by_words(config["infile"],substring_queue,max_words);
 
-    for(int i=0;i<indexing_threads;++i){indexers[i].join();}
+    auto res_d = dicts_queue.pop();
+    merge_all(res_d, dicts_queue, indexing_threads);
 
-    auto d1 = dicts_queue.pop();
-    merge_all(d1, dicts_queue, indexing_threads);
+
+    for(int i=0;i<indexing_threads;++i){indexers[i].join();}
+//    for(int i=0;i<merging_threads;++i){mergeres[i].join();}
 
 
     auto total_time = get_current_time_fenced() - start_time;
 
-    write_result(d1, config["out_by_a"], "key");
-    write_result(d1, config["out_by_n"], "val");
+    write_result(res_d, config["out_by_a"], "key");
+    write_result(res_d, config["out_by_n"], "val");
 
     std::cout << "Time: " <<  to_us(total_time) << std::endl;
 

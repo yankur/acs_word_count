@@ -19,6 +19,7 @@ public:
     explicit ConcurrentQueue(size_t lim);
     ~ConcurrentQueue();
     void push(T e);
+    std::pair<T, T> pop2();
     T pop();
     void poison();
     bool is_poisoned() const;
@@ -121,6 +122,35 @@ void ConcurrentQueue<T>::poison() {
 template<typename T>
 bool ConcurrentQueue<T>::is_poisoned() const{
     return poisoned;
+}
+
+template<typename T>
+std::pair<T, T> ConcurrentQueue<T>::pop2() {
+    std::unique_lock<std::mutex> lg(m_m);
+    std::pair<T, T> res;
+    if(size < 2) {
+        if (poisoned) {
+            T t1, t2;
+            if(size==1){
+                t2 = this->pop();
+            }
+            res.first = t1;
+            res.second = t2;
+            return res;
+        }
+        for_pop.wait(lg);
+    }
+    NODE *tmp1 = mHead;
+    NODE *tmp2 = mHead->next;
+    res.first = tmp1->data;
+    res.second = tmp2->data;
+    mHead = tmp2->next;
+    delete tmp1;
+    delete tmp2;
+    size-=2;
+    for_push.notify_one();
+    for_push.notify_one();
+    return res;
 }
 
 
