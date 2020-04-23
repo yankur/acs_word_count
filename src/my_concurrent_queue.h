@@ -20,9 +20,9 @@ public:
     ~ConcurrentQueue();
     void push(T e);
     T pop();
-    size_t get_size();
     void poison();
-    bool is_poisoned();
+    bool is_poisoned() const;
+    size_t get_size() const;
 private:
     struct node
     {
@@ -109,7 +109,7 @@ T ConcurrentQueue<T>::pop()
 }
 
 template<typename T>
-size_t ConcurrentQueue<T>::get_size() {
+size_t ConcurrentQueue<T>::get_size() const{
     return size;
 }
 
@@ -119,8 +119,9 @@ void ConcurrentQueue<T>::poison() {
 }
 
 template<typename T>
-bool ConcurrentQueue<T>::is_poisoned() {
+bool ConcurrentQueue<T>::is_poisoned() const{
     return poisoned;
 }
+
 
 #endif //LAB4_WORD_COUNT_MY_CONCURRENT_QUEUE_H

@@ -14,6 +14,7 @@
 #include "read_file.h"
 #include "unpack.h"
 #include "read_by_words.h"
+#include "merge_all.h"
 
 
 inline std::chrono::high_resolution_clock::time_point get_current_time_fenced()
@@ -41,9 +42,6 @@ int main() {
     size_t max_words=std::stoi(config["max_words"]);
     size_t queue_limit=std::stoi(config["queue_limit"]);
 
-    std::cout<<config["out_by_n"]<<std::endl;
-    std::cout<<config["out_by_a"]<<std::endl;
-
     auto start_time = get_current_time_fenced();
 
     std::vector<std::thread> indexers;
@@ -53,19 +51,13 @@ int main() {
     for(int i=0;i<indexing_threads;++i){
         indexers.emplace_back(count_words, std::ref(substring_queue), std::ref(dicts_queue));
     }
+
     read_by_words(config["infile"],substring_queue,max_words);
 
-
+    merge_all(dicts_queue);
     auto d1 = dicts_queue.pop();
 
-    while(dicts_queue.get_size()!=0){
-        auto d2 = dicts_queue.pop();
-        merge(d1, d2);
-    }
-
-    for(int i=0;i<indexing_threads;++i){
-        indexers[i].join();
-    }
+    for(int i=0;i<indexing_threads;++i){indexers[i].join();}
 
     auto total_time = get_current_time_fenced() - start_time;
 

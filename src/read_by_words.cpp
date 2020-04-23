@@ -26,5 +26,7 @@ void read_by_words(std::string& filename, ConcurrentQueue<std::string> &strings_
     if(part.size()>0){
         strings_queue.push(part);
     }
+    std::string poison_pill = "";
+    strings_queue.push(poison_pill);
     strings_queue.poison();
 }
