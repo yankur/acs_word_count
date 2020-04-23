@@ -1,7 +1,7 @@
 infile="../bible.txt"
 out_by_a="../data/res_a.txt"
 out_by_n="../data/res_n.txt"
-threads=4
-indexing_threads=4
-max_words=500000
+threads=6
+indexing_threads=3
+max_words=1000000
 queue_limit=300

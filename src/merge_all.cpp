@@ -8,6 +8,7 @@
 
 void merge_all(std::unordered_map<std::string, size_t> &res, ConcurrentQueue<std::unordered_map<std::string, size_t>> &dicts_q, std::mutex& m) {
     while(true){
+        std::cout<<"M";
         auto d1 = dicts_q.pop();
         if (is_poisoned_dict(d1)){
             dicts_q.push(d1);

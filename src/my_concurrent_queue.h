@@ -22,7 +22,7 @@ public:
     std::pair<T, T> pop2();
     T pop();
     void poison();
-    bool is_poisoned() const;
+
     size_t get_size() const;
 private:
     struct node
@@ -117,11 +117,6 @@ size_t ConcurrentQueue<T>::get_size() const{
 template<typename T>
 void ConcurrentQueue<T>::poison() {
     poisoned=true;
-}
-
-template<typename T>
-bool ConcurrentQueue<T>::is_poisoned() const{
-    return poisoned;
 }
 
 template<typename T>
