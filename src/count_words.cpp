@@ -10,7 +10,7 @@ void count_words(ConcurrentQueue<std::string>& inp_queue, ConcurrentQueue<std::u
     while(true){
         const std::string& inp_string = inp_queue.pop();
         if(inp_string==""){ // poison pill
-            inp_queue.push(inp_string);
+//            inp_queue.push(inp_string);
             break;
         }
         std::cout << "Counting started.." << std::endl;

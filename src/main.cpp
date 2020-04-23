@@ -47,6 +47,7 @@ int main() {
     std::vector<std::thread> mergeres;
     ConcurrentQueue<std::string> substring_queue(queue_limit);
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue(queue_limit);
+    std::mutex m;
 
     for(int i=0;i<indexing_threads;++i){
         indexers.emplace_back(count_words, std::ref(substring_queue), std::ref(dicts_queue));
@@ -55,11 +56,16 @@ int main() {
     read_by_words(config["infile"],substring_queue,max_words);
 
     auto res_d = dicts_queue.pop();
-    merge_all(res_d, dicts_queue, indexing_threads);
+
+    for(int i=0;i<merging_threads;++i){
+        mergeres.emplace_back(merge_all, std::ref(res_d), std::ref(dicts_queue), std::ref(m));
+    }
+//    merge_all(res_d, dicts_queue, 1);
 
 
     for(int i=0;i<indexing_threads;++i){indexers[i].join();}
-//    for(int i=0;i<merging_threads;++i){mergeres[i].join();}
+    substring_queue.push("");
+    for(int i=0;i<merging_threads;++i){mergeres[i].join();}
 
 
     auto total_time = get_current_time_fenced() - start_time;
