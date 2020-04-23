@@ -1,8 +1,0 @@
-//
-// Created by kurlyana on 22.04.2020.
-//
-
-#ifndef LAB4_WORD_COUNT_LIST_CONTENTS_H
-#define LAB4_WORD_COUNT_LIST_CONTENTS_H
-
-#endif //LAB4_WORD_COUNT_LIST_CONTENTS_H
