@@ -7,32 +7,51 @@
 #include <string>
 #include <iostream>
 #include "unpack.h"
+#include "boost/filesystem.hpp"
+#include "my_concurrent_queue.h"
 
-//struct archive *a;
-//struct archive_entry *entry;
+std::string read_archive(const std::string& buffer , ConcurrentQueue<std::string> &substr_queue){
+    la_int64_t r;
+    off_t size;
 
-std::string read_archive( const char *filename ){
-    std::cout << "im here" << std::endl;
+    std::cout << "reading archiveeeee" << std::endl;
 
-    struct archive *a;
-    struct archive_entry *entry;
-
-    a = archive_read_new();
-    archive_read_support_filter_all(a);
-    std::string content;
-
+    struct archive *a = archive_read_new();
+    struct archive_entry *ae;
     archive_read_support_format_all(a);
-    archive_read_open_filename(a, filename, 10240);
+    archive_read_support_format_raw(a);
 
-    while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
+    std::cout << buffer.c_str() << "buffer" << std::endl;
 
-        auto size = archive_entry_size(entry);
-        content = std::string(size, 0);
-
-        archive_read_data(a, &content[0], content.size());
-        archive_read_data_skip(a);
+    r = archive_read_open_memory(a, buffer.c_str(), buffer.size());
+    std::cout << "done1" << std::endl;
+    if (r != ARCHIVE_OK) {
+        std::cerr << "Error While Accessing : " << buffer << std::endl;
+        exit(1);
     }
-    archive_read_free(a);
 
-    return content;
+    r = archive_read_next_header(a, &ae);
+    std::cout << "done2" << std::endl;
+    if (r != ARCHIVE_OK) {
+        std::cerr << "Error While Accessing : " << buffer << std::endl;
+        exit(1);
+    }
+    for (;;) {
+//        std::cout << boost::filesystem::path(archive_entry_pathname(ae)) << std::endl;
+
+        if (boost::filesystem::path(archive_entry_pathname(ae)).extension() == ".txt") {
+            std::cout << "done3" << std::endl;
+            size = archive_entry_size(ae);
+            std::string substr(size, char{});
+            r = archive_read_data(a, &substr[0], substr.size());
+            std::cout << substr << std::endl;
+            substr_queue.push(substr);
+        }
+
+        if (r != ARCHIVE_OK) {
+            std::cerr << "Error While Accessing : " << buffer << std::endl;
+            exit(1);
+        }
+    }
+    archive_read_close(a);
 }
