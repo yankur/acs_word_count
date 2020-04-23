@@ -3,10 +3,11 @@
 
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word);
 int next_nonalpha(const std::string &str, int current);
+std::string& trim(std::string& str, const std::string& chars = "\t\n\v\f\r ");
 
 
 void count_words(ConcurrentQueue<std::string>& inp_queue, ConcurrentQueue<std::unordered_map<std::string, size_t>> &queue) {
-    while(!inp_queue.is_poisoned()||inp_queue.get_size()!=0){
+    while(true){
         const std::string& inp_string = inp_queue.pop();
         if(inp_string==""){ // poison pill
             inp_queue.push(inp_string);
@@ -19,6 +20,7 @@ void count_words(ConcurrentQueue<std::string>& inp_queue, ConcurrentQueue<std::u
         for (auto x : inp_string)
         {
             if (!isalpha(x)&&!(word.empty())) {
+                trim(word);
                 dict_update(dict_of_words, word);
                 word = "";
             }
@@ -51,4 +53,11 @@ int next_nonalpha(const std::string &str, int current){
         ++current;
     }
     return str.size() - 1;
+}
+
+std::string& trim(std::string& str, const std::string& chars)
+{
+    str.erase(0, str.find_first_not_of(chars));
+    str.erase(str.find_last_not_of(chars) + 1);
+    return str;
 }

@@ -10,6 +10,6 @@
 
 #include "my_concurrent_queue.h"
 
-void merge_all(ConcurrentQueue<std::unordered_map<std::string, size_t>>& dicts_q);
+void merge_all(std::unordered_map<std::string, size_t> &res, ConcurrentQueue<std::unordered_map<std::string, size_t>> &dicts_q, size_t pill_number);
 
 #endif //LAB4_WORD_COUNT_MERGE_ALL_H

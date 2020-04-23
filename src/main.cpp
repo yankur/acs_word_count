@@ -53,10 +53,11 @@ int main() {
 
     read_by_words(config["infile"],substring_queue,max_words);
 
-    merge_all(dicts_queue);
-    auto d1 = dicts_queue.pop();
-
     for(int i=0;i<indexing_threads;++i){indexers[i].join();}
+
+    auto d1 = dicts_queue.pop();
+    merge_all(d1, dicts_queue, indexing_threads);
+
 
     auto total_time = get_current_time_fenced() - start_time;
 
