@@ -1,4 +1,5 @@
 #include "count_words.h"
+#include "is_poisoned.h"
 
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word);
 int next_nonalpha(const std::string &str, int current);
@@ -17,14 +18,16 @@ void count_words(ConcurrentQueue<std::string>& inp_queue, ConcurrentQueue<std::u
         std::string word = "";
         for (auto x : inp_string)
         {
-            if (!isalpha(x)) {
+            if (!isalpha(x)&&!(word.empty())) {
                 dict_update(dict_of_words, word);
                 word = "";
             }
             else { word += char(tolower(x)); }
         }
         std::cout << "Counting finished. Start pushing.." << "\n";
-        queue.push(dict_of_words);
+        if(!is_poisoned_dict(dict_of_words)){
+            queue.push(dict_of_words);
+        }
     }
     std::unordered_map<std::string, size_t> poison_p;
     poison_p[""] = 0;

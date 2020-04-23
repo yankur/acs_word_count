@@ -4,10 +4,7 @@
 
 #include "merge_all.h"
 #include "merge.h"
-
-bool is_poisoned_dict(std::unordered_map<std::string, size_t> dct){
-    return dct.size() == 1 && dct.count("") > 0 && dct[""] == 0;
-}
+#include "is_poisoned.h"
 
 void merge_all(ConcurrentQueue<std::unordered_map<std::string, size_t>> &dicts_q) {
     while(dicts_q.get_size()!=1 && !dicts_q.is_poisoned()){
