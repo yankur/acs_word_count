@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/111/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kurlyana/UCU/SEM4/ACS/lab4_word_count
+CMAKE_SOURCE_DIR = /home/hryts/UCU/22/aks/acs_word_count1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug
+CMAKE_BINARY_DIR = /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,86 +123,86 @@ lab4_word_count/fast:
 	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/build
 .PHONY : lab4_word_count/fast
 
-src/count_words.o: src/count_words.cpp.o
+src/count_words_boost.o: src/count_words_boost.cpp.o
 
-.PHONY : src/count_words.o
-
-# target to build an object file
-src/count_words.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o
-.PHONY : src/count_words.cpp.o
-
-src/count_words.i: src/count_words.cpp.i
-
-.PHONY : src/count_words.i
-
-# target to preprocess a source file
-src/count_words.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/count_words.cpp.i
-.PHONY : src/count_words.cpp.i
-
-src/count_words.s: src/count_words.cpp.s
-
-.PHONY : src/count_words.s
-
-# target to generate assembly for a file
-src/count_words.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/count_words.cpp.s
-.PHONY : src/count_words.cpp.s
-
-src/divide_and_push.o: src/divide_and_push.cpp.o
-
-.PHONY : src/divide_and_push.o
+.PHONY : src/count_words_boost.o
 
 # target to build an object file
-src/divide_and_push.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.o
-.PHONY : src/divide_and_push.cpp.o
+src/count_words_boost.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o
+.PHONY : src/count_words_boost.cpp.o
 
-src/divide_and_push.i: src/divide_and_push.cpp.i
+src/count_words_boost.i: src/count_words_boost.cpp.i
 
-.PHONY : src/divide_and_push.i
+.PHONY : src/count_words_boost.i
 
 # target to preprocess a source file
-src/divide_and_push.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.i
-.PHONY : src/divide_and_push.cpp.i
+src/count_words_boost.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.i
+.PHONY : src/count_words_boost.cpp.i
 
-src/divide_and_push.s: src/divide_and_push.cpp.s
+src/count_words_boost.s: src/count_words_boost.cpp.s
 
-.PHONY : src/divide_and_push.s
+.PHONY : src/count_words_boost.s
 
 # target to generate assembly for a file
-src/divide_and_push.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.s
-.PHONY : src/divide_and_push.cpp.s
+src/count_words_boost.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.s
+.PHONY : src/count_words_boost.cpp.s
 
-src/list_contents.o: src/list_contents.cpp.o
+src/is_poisoned.o: src/is_poisoned.cpp.o
 
-.PHONY : src/list_contents.o
+.PHONY : src/is_poisoned.o
 
 # target to build an object file
-src/list_contents.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.o
-.PHONY : src/list_contents.cpp.o
+src/is_poisoned.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o
+.PHONY : src/is_poisoned.cpp.o
 
-src/list_contents.i: src/list_contents.cpp.i
+src/is_poisoned.i: src/is_poisoned.cpp.i
 
-.PHONY : src/list_contents.i
+.PHONY : src/is_poisoned.i
 
 # target to preprocess a source file
-src/list_contents.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.i
-.PHONY : src/list_contents.cpp.i
+src/is_poisoned.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.i
+.PHONY : src/is_poisoned.cpp.i
 
-src/list_contents.s: src/list_contents.cpp.s
+src/is_poisoned.s: src/is_poisoned.cpp.s
 
-.PHONY : src/list_contents.s
+.PHONY : src/is_poisoned.s
 
 # target to generate assembly for a file
-src/list_contents.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.s
-.PHONY : src/list_contents.cpp.s
+src/is_poisoned.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.s
+.PHONY : src/is_poisoned.cpp.s
+
+src/iterate_over_dir.o: src/iterate_over_dir.cpp.o
+
+.PHONY : src/iterate_over_dir.o
+
+# target to build an object file
+src/iterate_over_dir.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o
+.PHONY : src/iterate_over_dir.cpp.o
+
+src/iterate_over_dir.i: src/iterate_over_dir.cpp.i
+
+.PHONY : src/iterate_over_dir.i
+
+# target to preprocess a source file
+src/iterate_over_dir.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.i
+.PHONY : src/iterate_over_dir.cpp.i
+
+src/iterate_over_dir.s: src/iterate_over_dir.cpp.s
+
+.PHONY : src/iterate_over_dir.s
+
+# target to generate assembly for a file
+src/iterate_over_dir.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.s
+.PHONY : src/iterate_over_dir.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -258,6 +258,60 @@ src/merge.cpp.s:
 	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/merge.cpp.s
 .PHONY : src/merge.cpp.s
 
+src/merge_all.o: src/merge_all.cpp.o
+
+.PHONY : src/merge_all.o
+
+# target to build an object file
+src/merge_all.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o
+.PHONY : src/merge_all.cpp.o
+
+src/merge_all.i: src/merge_all.cpp.i
+
+.PHONY : src/merge_all.i
+
+# target to preprocess a source file
+src/merge_all.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.i
+.PHONY : src/merge_all.cpp.i
+
+src/merge_all.s: src/merge_all.cpp.s
+
+.PHONY : src/merge_all.s
+
+# target to generate assembly for a file
+src/merge_all.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.s
+.PHONY : src/merge_all.cpp.s
+
+src/read_by_words.o: src/read_by_words.cpp.o
+
+.PHONY : src/read_by_words.o
+
+# target to build an object file
+src/read_by_words.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o
+.PHONY : src/read_by_words.cpp.o
+
+src/read_by_words.i: src/read_by_words.cpp.i
+
+.PHONY : src/read_by_words.i
+
+# target to preprocess a source file
+src/read_by_words.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.i
+.PHONY : src/read_by_words.cpp.i
+
+src/read_by_words.s: src/read_by_words.cpp.s
+
+.PHONY : src/read_by_words.s
+
+# target to generate assembly for a file
+src/read_by_words.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.s
+.PHONY : src/read_by_words.cpp.s
+
 src/read_config.o: src/read_config.cpp.o
 
 .PHONY : src/read_config.o
@@ -284,33 +338,6 @@ src/read_config.s: src/read_config.cpp.s
 src/read_config.cpp.s:
 	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_config.cpp.s
 .PHONY : src/read_config.cpp.s
-
-src/read_file.o: src/read_file.cpp.o
-
-.PHONY : src/read_file.o
-
-# target to build an object file
-src/read_file.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_file.cpp.o
-.PHONY : src/read_file.cpp.o
-
-src/read_file.i: src/read_file.cpp.i
-
-.PHONY : src/read_file.i
-
-# target to preprocess a source file
-src/read_file.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_file.cpp.i
-.PHONY : src/read_file.cpp.i
-
-src/read_file.s: src/read_file.cpp.s
-
-.PHONY : src/read_file.s
-
-# target to generate assembly for a file
-src/read_file.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_file.cpp.s
-.PHONY : src/read_file.cpp.s
 
 src/unpack.o: src/unpack.cpp.o
 
@@ -373,29 +400,32 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... lab4_word_count"
-	@echo "... src/count_words.o"
-	@echo "... src/count_words.i"
-	@echo "... src/count_words.s"
-	@echo "... src/divide_and_push.o"
-	@echo "... src/divide_and_push.i"
-	@echo "... src/divide_and_push.s"
-	@echo "... src/list_contents.o"
-	@echo "... src/list_contents.i"
-	@echo "... src/list_contents.s"
+	@echo "... edit_cache"
+	@echo "... src/count_words_boost.o"
+	@echo "... src/count_words_boost.i"
+	@echo "... src/count_words_boost.s"
+	@echo "... src/is_poisoned.o"
+	@echo "... src/is_poisoned.i"
+	@echo "... src/is_poisoned.s"
+	@echo "... src/iterate_over_dir.o"
+	@echo "... src/iterate_over_dir.i"
+	@echo "... src/iterate_over_dir.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/merge.o"
 	@echo "... src/merge.i"
 	@echo "... src/merge.s"
+	@echo "... src/merge_all.o"
+	@echo "... src/merge_all.i"
+	@echo "... src/merge_all.s"
+	@echo "... src/read_by_words.o"
+	@echo "... src/read_by_words.i"
+	@echo "... src/read_by_words.s"
 	@echo "... src/read_config.o"
 	@echo "... src/read_config.i"
 	@echo "... src/read_config.s"
-	@echo "... src/read_file.o"
-	@echo "... src/read_file.i"
-	@echo "... src/read_file.s"
 	@echo "... src/unpack.o"
 	@echo "... src/unpack.i"
 	@echo "... src/unpack.s"

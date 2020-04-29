@@ -4,21 +4,31 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/count_words.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/divide_and_push.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/divide_and_push.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/list_contents.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/list_contents.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_file.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_file.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/count_words_boost.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/is_poisoned.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/iterate_over_dir.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/main.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/merge.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/merge_all.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/read_by_words.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/unpack.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o"
+  "/home/hryts/UCU/22/aks/acs_word_count1/src/write_result.cpp" "/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_ALL_NO_LIB"
+  "BOOST_CHRONO_DYN_LINK"
+  "BOOST_FILESYSTEM_DYN_LINK"
+  "BOOST_LOCALE_DYN_LINK"
+  "BOOST_SYSTEM_DYN_LINK"
+  "BOOST_THREAD_DYN_LINK"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/boost_1_72_0"
   )
 
 # Targets to which this target links.
