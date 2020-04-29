@@ -7,13 +7,17 @@
 #include <vector>
 
 #include "merge.h"
-#include "count_words.h"
+#include "count_words_boost.h"
 #include "my_concurrent_queue.h"
 #include "read_config.h"
 #include "write_result.h"
 #include "unpack.h"
 #include "read_by_words.h"
 #include "merge_all.h"
+#include "iterate_over_dir.h"
+
+#include <boost/locale.hpp>
+
 
 
 inline std::chrono::high_resolution_clock::time_point get_current_time_fenced()
@@ -54,6 +58,7 @@ int main() {
     }
 
     read_by_words(config["infile"],substring_queue,max_words);
+//    iterate_over_dir("/home/hryts/UCU/22/aks/acs_word_count1/src", substring_queue, max_words);
 
     auto res_d = dicts_queue.pop();
     for(int i=0;i<merging_threads;++i){
