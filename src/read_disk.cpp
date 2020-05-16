@@ -88,9 +88,13 @@ void read_archive(const char *archive_file, ConcurrentQueue<std::string> &substr
         boost::filesystem::path entry_path = boost::filesystem::path(archive_entry_pathname(entry_ptr));
         if ((entry_path.extension() == TEXT_FILE_L || entry_path.extension() == TEXT_FILE_U) && archive_entry_size(entry_ptr) <= MAX_TEXT_FILE_SIZE) {
             std::cout << "entry" << entry_path.c_str() << "\n";
-            std::ostringstream buffer;
-            ret_signal = archive_read_data(archive_ptr, &buffer, archive_entry_size(entry_ptr));
-            divide_and_push(buffer.str(), substr_queue, max_words);
+            std::string text = std::string(archive_entry_size(entry_ptr), 0);
+            ret_signal = archive_read_data(archive_ptr, &text[0], text.size());
+            std::cout << "куе" << ret_signal;
+            if (ret_signal != ARCHIVE_OK)
+                continue;
+            std::cout << "buffer" << text;
+            divide_and_push(text, substr_queue, max_words);
         }
     }
     archive_free(archive_ptr);
