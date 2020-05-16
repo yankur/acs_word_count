@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /snap/clion/112/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hryts/UCU/22/aks/acs_word_count1
+CMAKE_SOURCE_DIR = /home/kurlyana/UCU/SEM4/ACS/lab4_word_count
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab4_word_count.dir/depend.make
@@ -59,133 +59,133 @@ include CMakeFiles/lab4_word_count.dir/flags.make
 
 CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o: ../src/count_words_boost.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/count_words_boost.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.cpp
 
 CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/count_words_boost.cpp > CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.cpp > CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/count_words_boost.cpp -o CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.cpp -o CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.s
 
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/main.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/main.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp
 
 CMakeFiles/lab4_word_count.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/main.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/main.cpp > CMakeFiles/lab4_word_count.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp > CMakeFiles/lab4_word_count.dir/src/main.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/main.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/main.cpp -o CMakeFiles/lab4_word_count.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp -o CMakeFiles/lab4_word_count.dir/src/main.cpp.s
 
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.o: ../src/merge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/merge.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/merge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/merge.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp
 
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/merge.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/merge.cpp > CMakeFiles/lab4_word_count.dir/src/merge.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp > CMakeFiles/lab4_word_count.dir/src/merge.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/merge.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/merge.cpp -o CMakeFiles/lab4_word_count.dir/src/merge.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp -o CMakeFiles/lab4_word_count.dir/src/merge.cpp.s
 
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o: ../src/read_config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/read_config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp
 
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/read_config.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/read_config.cpp > CMakeFiles/lab4_word_count.dir/src/read_config.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp > CMakeFiles/lab4_word_count.dir/src/read_config.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/read_config.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/read_config.cpp -o CMakeFiles/lab4_word_count.dir/src/read_config.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp -o CMakeFiles/lab4_word_count.dir/src/read_config.cpp.s
 
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o: ../src/write_result.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/write_result.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp
 
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/write_result.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/write_result.cpp > CMakeFiles/lab4_word_count.dir/src/write_result.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp > CMakeFiles/lab4_word_count.dir/src/write_result.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/write_result.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/write_result.cpp -o CMakeFiles/lab4_word_count.dir/src/write_result.cpp.s
-
-CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
-CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o: ../src/unpack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/unpack.cpp
-
-CMakeFiles/lab4_word_count.dir/src/unpack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/unpack.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/unpack.cpp > CMakeFiles/lab4_word_count.dir/src/unpack.cpp.i
-
-CMakeFiles/lab4_word_count.dir/src/unpack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/unpack.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/unpack.cpp -o CMakeFiles/lab4_word_count.dir/src/unpack.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp -o CMakeFiles/lab4_word_count.dir/src/write_result.cpp.s
 
 CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o: ../src/read_by_words.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/read_by_words.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.cpp
 
 CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/read_by_words.cpp > CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.cpp > CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/read_by_words.cpp -o CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.cpp -o CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.s
 
 CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o: ../src/merge_all.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/merge_all.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.cpp
 
 CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/merge_all.cpp > CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.cpp > CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/merge_all.cpp -o CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.cpp -o CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.s
 
 CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
 CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o: ../src/is_poisoned.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/is_poisoned.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/is_poisoned.cpp
 
 CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/is_poisoned.cpp > CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/is_poisoned.cpp > CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.i
 
 CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/is_poisoned.cpp -o CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/is_poisoned.cpp -o CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.s
 
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o: ../src/iterate_over_dir.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o -c /home/hryts/UCU/22/aks/acs_word_count1/src/iterate_over_dir.cpp
+CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
+CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o: ../trash/iterate_over_dir.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/iterate_over_dir.cpp
 
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hryts/UCU/22/aks/acs_word_count1/src/iterate_over_dir.cpp > CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.i
+CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/iterate_over_dir.cpp > CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.i
 
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hryts/UCU/22/aks/acs_word_count1/src/iterate_over_dir.cpp -o CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.s
+CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/iterate_over_dir.cpp -o CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.s
+
+CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o: CMakeFiles/lab4_word_count.dir/flags.make
+CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o: ../src/read_archive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o -c /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_archive.cpp
+
+CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_archive.cpp > CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.i
+
+CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_archive.cpp -o CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.s
 
 # Object files for target lab4_word_count
 lab4_word_count_OBJECTS = \
@@ -194,11 +194,11 @@ lab4_word_count_OBJECTS = \
 "CMakeFiles/lab4_word_count.dir/src/merge.cpp.o" \
 "CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o" \
 "CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o" \
-"CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o" \
 "CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o" \
 "CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o" \
 "CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o" \
-"CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o"
+"CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o" \
+"CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o"
 
 # External object files for target lab4_word_count
 lab4_word_count_EXTERNAL_OBJECTS =
@@ -208,20 +208,20 @@ lab4_word_count: CMakeFiles/lab4_word_count.dir/src/main.cpp.o
 lab4_word_count: CMakeFiles/lab4_word_count.dir/src/merge.cpp.o
 lab4_word_count: CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o
 lab4_word_count: CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o
-lab4_word_count: CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o
 lab4_word_count: CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o
 lab4_word_count: CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o
 lab4_word_count: CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o
-lab4_word_count: CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o
+lab4_word_count: CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o
+lab4_word_count: CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o
 lab4_word_count: CMakeFiles/lab4_word_count.dir/build.make
-lab4_word_count: /usr/lib/libarchive.so
-lab4_word_count: /usr/lib64/libboost_filesystem.so.1.72.0
-lab4_word_count: /usr/lib64/libboost_locale.so.1.72.0
-lab4_word_count: /usr/lib64/libboost_chrono.so.1.72.0
-lab4_word_count: /usr/lib64/libboost_system.so.1.72.0
-lab4_word_count: /usr/lib64/libboost_thread.so.1.72.0
+lab4_word_count: /usr/local/lib/libarchive.so
+lab4_word_count: /usr/lib/libboost_filesystem.so.1.72.0
+lab4_word_count: /usr/lib/libboost_locale.so.1.72.0
+lab4_word_count: /usr/lib/libboost_chrono.so.1.72.0
+lab4_word_count: /usr/lib/libboost_system.so.1.72.0
+lab4_word_count: /usr/lib/libboost_thread.so.1.72.0
 lab4_word_count: CMakeFiles/lab4_word_count.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable lab4_word_count"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable lab4_word_count"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab4_word_count.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -234,6 +234,6 @@ CMakeFiles/lab4_word_count.dir/clean:
 .PHONY : CMakeFiles/lab4_word_count.dir/clean
 
 CMakeFiles/lab4_word_count.dir/depend:
-	cd /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hryts/UCU/22/aks/acs_word_count1 /home/hryts/UCU/22/aks/acs_word_count1 /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/CMakeFiles/lab4_word_count.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kurlyana/UCU/SEM4/ACS/lab4_word_count /home/kurlyana/UCU/SEM4/ACS/lab4_word_count /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab4_word_count.dir/depend
 

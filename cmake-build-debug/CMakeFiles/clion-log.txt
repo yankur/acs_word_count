@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/bin/gcc -DCMAKE_CXX_COMPILER=/bin/g++ -G "CodeBlocks - Unix Makefiles" /home/hryts/UCU/22/aks/acs_word_count1
+/snap/clion/112/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/kurlyana/UCU/SEM4/ACS/lab4_word_count
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug
+-- Build files have been written to: /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug

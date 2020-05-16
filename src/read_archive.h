@@ -1,0 +1,8 @@
+//
+// Created by kurlyana on 16.05.2020.
+//
+
+#ifndef LAB4_WORD_COUNT_READ_ARCHIVE_H
+#define LAB4_WORD_COUNT_READ_ARCHIVE_H
+
+#endif //LAB4_WORD_COUNT_READ_ARCHIVE_H

@@ -1,5 +1,5 @@
 #include "count_words.h"
-#include "is_poisoned.h"
+#include "../src/is_poisoned.h"
 
 void dict_update(std::unordered_map<std::string, size_t> &dict_of_words, const std::string& word);
 int next_nonalpha(const std::string &str, int current);

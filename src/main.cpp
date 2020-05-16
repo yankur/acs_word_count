@@ -11,10 +11,10 @@
 #include "my_concurrent_queue.h"
 #include "read_config.h"
 #include "write_result.h"
-#include "unpack.h"
-#include "read_by_words.h"
+#include "../trash/unpack.h"
+#include "../trash/read_by_words.h"
 #include "merge_all.h"
-#include "iterate_over_dir.h"
+#include "../trash/iterate_over_dir.h"
 
 #include <boost/locale.hpp>
 
@@ -53,32 +53,32 @@ int main() {
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue(queue_limit);
     std::mutex m;
 
-    for(int i=0;i<indexing_threads;++i){
-        indexers.emplace_back(count_words, std::ref(substring_queue), std::ref(dicts_queue));
-    }
+//    for(int i=0;i<indexing_threads;++i){
+//        indexers.emplace_back(count_words, std::ref(substring_queue), std::ref(dicts_queue));
+//    }
 
-    read_by_words(config["infile"],substring_queue,max_words);
-//    iterate_over_dir("/home/hryts/UCU/22/aks/acs_word_count1/src", substring_queue, max_words);
+//    read_by_words(config["infile"],substring_queue,max_words);
+    iterate_over_dir(config["infile"],substring_queue,max_words);
 
-    auto res_d = dicts_queue.pop();
-    for(int i=0;i<merging_threads;++i){
-        mergers.emplace_back(merge_all, std::ref(res_d), std::ref(dicts_queue), std::ref(m));
-    }
-
-
-    for(int i=0;i<indexing_threads;++i){indexers[i].join();}
-    std::unordered_map<std::string, size_t> t;
-    t[""] = 0;
-    dicts_queue.push(t);
-    for(int i=0;i<merging_threads;++i){mergers[i].join();}
-
-
-    auto total_time = get_current_time_fenced() - start_time;
-
-    write_result(res_d, config["out_by_a"], "key");
-    write_result(res_d, config["out_by_n"], "val");
-
-    std::cout << std::endl << "Time: " <<  to_us(total_time) << std::endl;
-
+//    auto res_d = dicts_queue.pop();
+//    for(int i=0;i<merging_threads;++i){
+//        mergers.emplace_back(merge_all, std::ref(res_d), std::ref(dicts_queue), std::ref(m));
+//    }
+//
+//
+//    for(int i=0;i<indexing_threads;++i){indexers[i].join();}
+//    std::unordered_map<std::string, size_t> t;
+//    t[""] = 0;
+//    dicts_queue.push(t);
+//    for(int i=0;i<merging_threads;++i){mergers[i].join();}
+//
+//
+//    auto total_time = get_current_time_fenced() - start_time;
+//
+//    write_result(res_d, config["out_by_a"], "key");
+//    write_result(res_d, config["out_by_n"], "val");
+//
+//    std::cout << std::endl << "Time: " <<  to_us(total_time) << std::endl;
+//
     return 0;
 }

@@ -42,9 +42,5 @@ CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o: ../src/read_by_words.h
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o: ../src/read_config.cpp
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o: ../src/read_config.h
 
-CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o: ../src/my_concurrent_queue.h
-CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o: ../src/unpack.cpp
-CMakeFiles/lab4_word_count.dir/src/unpack.cpp.o: ../src/unpack.h
-
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o: ../src/write_result.cpp
 

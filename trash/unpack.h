@@ -10,7 +10,7 @@
 #include <string>
 #include <iostream>
 #include "boost/filesystem.hpp"
-#include "my_concurrent_queue.h"
+#include "../src/my_concurrent_queue.h"
 
 std::string read_archive(const std::string& buffer , ConcurrentQueue<std::string> &substr_queue);
 

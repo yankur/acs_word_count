@@ -3,7 +3,7 @@
 //
 
 #include <string>
-#include "my_concurrent_queue.h"
+#include "../src/my_concurrent_queue.h"
 
 #ifndef LAB4_WORD_COUNT_READ_BY_WORDS_H
 #define LAB4_WORD_COUNT_READ_BY_WORDS_H

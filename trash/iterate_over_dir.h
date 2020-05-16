@@ -6,7 +6,7 @@
 #define LAB4_WORD_COUNT_ITERATE_OVER_DIR_H
 
 #include <boost/filesystem.hpp>
-#include "my_concurrent_queue.h"
+#include "../src/my_concurrent_queue.h"
 #include <string>
 #include "unpack.h"
 #include "read_by_words.h"

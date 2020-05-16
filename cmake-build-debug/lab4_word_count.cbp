@@ -5,232 +5,234 @@
 		<Option title="lab4_word_count"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Boost-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_headers-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_locale-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_chrono-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_system-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_thread-1.72.0\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\Boost-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_headers-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_filesystem-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_locale-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_system-1.72.0\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.72.0\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug"/>
+				<Option working_dir="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug"/>
+				<Option working_dir="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="lab4_word_count">
-				<Option output="/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/lab4_word_count" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_ALL_NO_LIB"/>
-					<Add option="-DBOOST_LOCALE_DYN_LINK"/>
-					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
-					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_THREAD_DYN_LINK"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4_word_count"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="lab4_word_count/fast">
-				<Option output="/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/lab4_word_count" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_ALL_NO_LIB"/>
-					<Add option="-DBOOST_LOCALE_DYN_LINK"/>
-					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
-					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_THREAD_DYN_LINK"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4_word_count/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug"/>
+				<Option working_dir="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hryts/UCU/22/aks/acs_word_count1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab4_word_count">
+				<Option output="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/lab4_word_count" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_LOCALE_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4_word_count"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab4_word_count/fast">
+				<Option output="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/lab4_word_count" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_LOCALE_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4_word_count/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/count_words_boost.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/count_words_boost.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/is_poisoned.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/is_poisoned.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/is_poisoned.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/is_poisoned.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/iterate_over_dir.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/iterate_over_dir.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/main.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/merge.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/merge.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/merge_all.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/merge_all.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_archive.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/my_concurrent_queue.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_archive.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/read_by_words.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/read_by_words.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/read_config.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/unpack.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/unpack.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/write_result.cpp">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/iterate_over_dir.cpp">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/src/write_result.h">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/iterate_over_dir.h">
 			<Option target="lab4_word_count"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/CMakeLists.txt">
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/BoostDetectToolset-1.72.0.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/BoostDetectToolset-1.72.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/Boost-1.72.0/BoostConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Boost-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/Boost-1.72.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\Boost-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/Boost-1.72.0/BoostConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\Boost-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/Boost-1.72.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\Boost-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_headers-1.72.0/boost_headers-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_headers-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_headers-1.72.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_headers-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_headers-1.72.0/boost_headers-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_headers-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_headers-1.72.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_headers-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_filesystem-1.72.0/boost_filesystem-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_filesystem-1.72.0/boost_filesystem-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_filesystem-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_filesystem-1.72.0/boost_filesystem-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_filesystem-1.72.0/boost_filesystem-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_filesystem-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_filesystem-1.72.0/libboost_filesystem-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_filesystem-1.72.0/libboost_filesystem-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_filesystem-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_filesystem-1.72.0/libboost_filesystem-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_filesystem-1.72.0/libboost_filesystem-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_filesystem-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_locale-1.72.0/boost_locale-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_locale-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_locale-1.72.0/boost_locale-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_locale-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_locale-1.72.0/boost_locale-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_locale-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_locale-1.72.0/boost_locale-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_locale-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_locale-1.72.0/libboost_locale-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_locale-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_locale-1.72.0/libboost_locale-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_locale-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_locale-1.72.0/libboost_locale-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_locale-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_locale-1.72.0/libboost_locale-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_locale-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_chrono-1.72.0/boost_chrono-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_chrono-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_chrono-1.72.0/boost_chrono-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_chrono-1.72.0/boost_chrono-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_chrono-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_chrono-1.72.0/boost_chrono-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_chrono-1.72.0/libboost_chrono-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_chrono-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_chrono-1.72.0/libboost_chrono-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_chrono-1.72.0/libboost_chrono-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_chrono-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_chrono-1.72.0/libboost_chrono-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_system-1.72.0/boost_system-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_system-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_system-1.72.0/boost_system-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_system-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_system-1.72.0/boost_system-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_system-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_system-1.72.0/boost_system-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_system-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_system-1.72.0/libboost_system-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_system-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_system-1.72.0/libboost_system-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_system-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_system-1.72.0/libboost_system-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_system-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_system-1.72.0/libboost_system-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_system-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_thread-1.72.0/boost_thread-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_thread-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_thread-1.72.0/boost_thread-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_thread-1.72.0/boost_thread-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_thread-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_thread-1.72.0/boost_thread-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_thread-1.72.0/libboost_thread-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_thread-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_thread-1.72.0/libboost_thread-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.72.0\"/>
 		</Unit>
-		<Unit filename="/home/hryts/UCU/22/aks/acs_word_count1/../../../../../../usr/lib64/cmake/boost_thread-1.72.0/libboost_thread-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\boost_thread-1.72.0\"/>
+		<Unit filename="/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/../../../../../../usr/lib/cmake/boost_thread-1.72.0/libboost_thread-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.72.0\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

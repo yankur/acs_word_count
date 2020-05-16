@@ -8,7 +8,7 @@
 #include <iostream>
 #include "unpack.h"
 #include "boost/filesystem.hpp"
-#include "my_concurrent_queue.h"
+#include "../src/my_concurrent_queue.h"
 
 std::string read_archive(const std::string& buffer , ConcurrentQueue<std::string> &substr_queue){
     la_int64_t r;
