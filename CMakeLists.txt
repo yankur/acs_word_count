@@ -38,9 +38,9 @@ ADD_EXECUTABLE (lab4_word_count
         src/merge_all.h
         src/is_poisoned.cpp
         src/is_poisoned.h
-        trash/iterate_over_dir.cpp
-        trash/iterate_over_dir.h
-        src/read_archive.cpp src/read_archive.h)
+        src/read_disk.cpp
+        src/read_disk.h
+        )
 
 TARGET_LINK_LIBRARIES (lab4_word_count ${LibArchive})
 TARGET_LINK_LIBRARIES ( lab4_word_count ${Boost_LIBRARIES})

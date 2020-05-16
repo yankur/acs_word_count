@@ -11,10 +11,8 @@
 #include "my_concurrent_queue.h"
 #include "read_config.h"
 #include "write_result.h"
-#include "../trash/unpack.h"
-#include "../trash/read_by_words.h"
 #include "merge_all.h"
-#include "../trash/iterate_over_dir.h"
+#include "read_disk.h"
 
 #include <boost/locale.hpp>
 
@@ -35,10 +33,8 @@ inline long long to_us(const D& d)
 }
 
 int main() {
-//    std::cout << "main" << std::endl;
-//    std::string file = "../bible.zip";
-//    auto content = read_archive(file.c_str());
 
+    std::cout << "main" << "\n";
     auto config = read_conf();
     size_t merging_threads=std::stoi(config["threads"]);
     size_t indexing_threads=std::stoi(config["indexing_threads"]);
@@ -53,32 +49,36 @@ int main() {
     ConcurrentQueue<std::unordered_map<std::string, size_t>> dicts_queue(queue_limit);
     std::mutex m;
 
-//    for(int i=0;i<indexing_threads;++i){
-//        indexers.emplace_back(count_words, std::ref(substring_queue), std::ref(dicts_queue));
-//    }
+    for(int i=0;i<indexing_threads;++i){
+        indexers.emplace_back(count_words, std::ref(substring_queue), std::ref(dicts_queue));
+    }
 
-//    read_by_words(config["infile"],substring_queue,max_words);
-    iterate_over_dir(config["infile"],substring_queue,max_words);
+    std::cout << "reading" << "\n";
+    std::cout << config["infile"] << "\n";
+    read_disk(config["infile"],substring_queue,max_words);
 
-//    auto res_d = dicts_queue.pop();
-//    for(int i=0;i<merging_threads;++i){
-//        mergers.emplace_back(merge_all, std::ref(res_d), std::ref(dicts_queue), std::ref(m));
-//    }
-//
-//
-//    for(int i=0;i<indexing_threads;++i){indexers[i].join();}
-//    std::unordered_map<std::string, size_t> t;
-//    t[""] = 0;
-//    dicts_queue.push(t);
-//    for(int i=0;i<merging_threads;++i){mergers[i].join();}
-//
-//
-//    auto total_time = get_current_time_fenced() - start_time;
-//
-//    write_result(res_d, config["out_by_a"], "key");
-//    write_result(res_d, config["out_by_n"], "val");
-//
-//    std::cout << std::endl << "Time: " <<  to_us(total_time) << std::endl;
-//
+    std::cout << "counting" << "\n";
+
+    auto res_d = dicts_queue.pop();
+    for(int i=0;i<merging_threads;++i){
+        mergers.emplace_back(merge_all, std::ref(res_d), std::ref(dicts_queue), std::ref(m));
+    }
+    std::cout << "merged" << "\n";
+
+
+    for(int i=0;i<indexing_threads;++i){indexers[i].join();}
+    std::unordered_map<std::string, size_t> t;
+    t[""] = 0;
+    dicts_queue.push(t);
+    for(int i=0;i<merging_threads;++i){mergers[i].join();}
+
+
+    auto total_time = get_current_time_fenced() - start_time;
+
+    write_result(res_d, config["out_by_a"], "key");
+    write_result(res_d, config["out_by_n"], "val");
+
+    std::cout << std::endl << "Time: " <<  to_us(total_time) << std::endl;
+
     return 0;
 }

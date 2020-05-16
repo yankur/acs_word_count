@@ -9,23 +9,17 @@ CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o
 CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/is_poisoned.cpp
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/is_poisoned.h
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/iterate_over_dir.cpp
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/iterate_over_dir.h
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.h
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/count_words_boost.h
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/iterate_over_dir.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.h
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/unpack.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_disk.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/read_by_words.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/unpack.h
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.h
@@ -35,12 +29,18 @@ CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.cpp
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.h
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
-CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.cpp
- /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.h
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.h
+CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_disk.cpp
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_disk.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/read_by_words.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/unpack.h
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o
  /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp
+CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.o
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/my_concurrent_queue.h
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/read_by_words.cpp
+ /home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/read_by_words.h

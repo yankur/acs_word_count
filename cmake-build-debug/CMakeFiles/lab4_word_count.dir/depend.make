@@ -9,22 +9,16 @@ CMakeFiles/lab4_word_count.dir/src/count_words_boost.cpp.o: ../src/my_concurrent
 CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o: ../src/is_poisoned.cpp
 CMakeFiles/lab4_word_count.dir/src/is_poisoned.cpp.o: ../src/is_poisoned.h
 
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o: ../src/iterate_over_dir.cpp
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o: ../src/iterate_over_dir.h
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o: ../src/my_concurrent_queue.h
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o: ../src/read_by_words.h
-CMakeFiles/lab4_word_count.dir/src/iterate_over_dir.cpp.o: ../src/unpack.h
-
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/count_words_boost.h
-CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/iterate_over_dir.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/merge.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/merge_all.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/my_concurrent_queue.h
-CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/read_by_words.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/read_config.h
-CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/unpack.h
+CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/read_disk.h
 CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../src/write_result.h
+CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../trash/read_by_words.h
+CMakeFiles/lab4_word_count.dir/src/main.cpp.o: ../trash/unpack.h
 
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.o: ../src/merge.cpp
 CMakeFiles/lab4_word_count.dir/src/merge.cpp.o: ../src/merge.h
@@ -35,12 +29,18 @@ CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o: ../src/merge_all.cpp
 CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o: ../src/merge_all.h
 CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o: ../src/my_concurrent_queue.h
 
-CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o: ../src/my_concurrent_queue.h
-CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o: ../src/read_by_words.cpp
-CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o: ../src/read_by_words.h
-
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o: ../src/read_config.cpp
 CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o: ../src/read_config.h
 
+CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o: ../src/my_concurrent_queue.h
+CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o: ../src/read_disk.cpp
+CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o: ../src/read_disk.h
+CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o: ../trash/read_by_words.h
+CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o: ../trash/unpack.h
+
 CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o: ../src/write_result.cpp
+
+CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.o: ../src/my_concurrent_queue.h
+CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.o: ../trash/read_by_words.cpp
+CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.o: ../trash/read_by_words.h
 

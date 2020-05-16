@@ -12,6 +12,6 @@
 #include "boost/filesystem.hpp"
 #include "../src/my_concurrent_queue.h"
 
-std::string read_archive(const std::string& buffer , ConcurrentQueue<std::string> &substr_queue);
+std::string read_archive(const char *buffer , ConcurrentQueue<std::string> &substr_queue);
 
 #endif //LAB4_WORD_COUNT_UNPACK_H

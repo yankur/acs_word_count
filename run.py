@@ -27,7 +27,7 @@ def test(threads):
 
 
 def generate_config(threads):
-    conf_file = open('data/config.dat', 'w')
+    conf_file = open('config.dat', 'w')
     conf_file.write('infile=\"bible.txt\"\nout_by_a=\"res_a.txt\"\nout_by_n=\"res_n.txt\"\nthreads={}'.format(threads))
     conf_file.close()
 

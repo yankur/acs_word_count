@@ -9,11 +9,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/main.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/main.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/merge.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/merge_all.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_archive.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_by_words.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_config.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o"
+  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/read_disk.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o"
   "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/src/write_result.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/src/write_result.cpp.o"
-  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/iterate_over_dir.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o"
+  "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/trash/read_by_words.cpp" "/home/kurlyana/UCU/SEM4/ACS/lab4_word_count/cmake-build-debug/CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

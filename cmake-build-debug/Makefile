@@ -258,60 +258,6 @@ src/merge_all.cpp.s:
 	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/merge_all.cpp.s
 .PHONY : src/merge_all.cpp.s
 
-src/read_archive.o: src/read_archive.cpp.o
-
-.PHONY : src/read_archive.o
-
-# target to build an object file
-src/read_archive.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o
-.PHONY : src/read_archive.cpp.o
-
-src/read_archive.i: src/read_archive.cpp.i
-
-.PHONY : src/read_archive.i
-
-# target to preprocess a source file
-src/read_archive.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.i
-.PHONY : src/read_archive.cpp.i
-
-src/read_archive.s: src/read_archive.cpp.s
-
-.PHONY : src/read_archive.s
-
-# target to generate assembly for a file
-src/read_archive.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.s
-.PHONY : src/read_archive.cpp.s
-
-src/read_by_words.o: src/read_by_words.cpp.o
-
-.PHONY : src/read_by_words.o
-
-# target to build an object file
-src/read_by_words.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.o
-.PHONY : src/read_by_words.cpp.o
-
-src/read_by_words.i: src/read_by_words.cpp.i
-
-.PHONY : src/read_by_words.i
-
-# target to preprocess a source file
-src/read_by_words.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.i
-.PHONY : src/read_by_words.cpp.i
-
-src/read_by_words.s: src/read_by_words.cpp.s
-
-.PHONY : src/read_by_words.s
-
-# target to generate assembly for a file
-src/read_by_words.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_by_words.cpp.s
-.PHONY : src/read_by_words.cpp.s
-
 src/read_config.o: src/read_config.cpp.o
 
 .PHONY : src/read_config.o
@@ -338,6 +284,33 @@ src/read_config.s: src/read_config.cpp.s
 src/read_config.cpp.s:
 	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_config.cpp.s
 .PHONY : src/read_config.cpp.s
+
+src/read_disk.o: src/read_disk.cpp.o
+
+.PHONY : src/read_disk.o
+
+# target to build an object file
+src/read_disk.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.o
+.PHONY : src/read_disk.cpp.o
+
+src/read_disk.i: src/read_disk.cpp.i
+
+.PHONY : src/read_disk.i
+
+# target to preprocess a source file
+src/read_disk.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.i
+.PHONY : src/read_disk.cpp.i
+
+src/read_disk.s: src/read_disk.cpp.s
+
+.PHONY : src/read_disk.s
+
+# target to generate assembly for a file
+src/read_disk.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_disk.cpp.s
+.PHONY : src/read_disk.cpp.s
 
 src/write_result.o: src/write_result.cpp.o
 
@@ -366,32 +339,32 @@ src/write_result.cpp.s:
 	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/write_result.cpp.s
 .PHONY : src/write_result.cpp.s
 
-trash/iterate_over_dir.o: trash/iterate_over_dir.cpp.o
+trash/read_by_words.o: trash/read_by_words.cpp.o
 
-.PHONY : trash/iterate_over_dir.o
+.PHONY : trash/read_by_words.o
 
 # target to build an object file
-trash/iterate_over_dir.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.o
-.PHONY : trash/iterate_over_dir.cpp.o
+trash/read_by_words.cpp.o:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.o
+.PHONY : trash/read_by_words.cpp.o
 
-trash/iterate_over_dir.i: trash/iterate_over_dir.cpp.i
+trash/read_by_words.i: trash/read_by_words.cpp.i
 
-.PHONY : trash/iterate_over_dir.i
+.PHONY : trash/read_by_words.i
 
 # target to preprocess a source file
-trash/iterate_over_dir.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.i
-.PHONY : trash/iterate_over_dir.cpp.i
+trash/read_by_words.cpp.i:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.i
+.PHONY : trash/read_by_words.cpp.i
 
-trash/iterate_over_dir.s: trash/iterate_over_dir.cpp.s
+trash/read_by_words.s: trash/read_by_words.cpp.s
 
-.PHONY : trash/iterate_over_dir.s
+.PHONY : trash/read_by_words.s
 
 # target to generate assembly for a file
-trash/iterate_over_dir.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/trash/iterate_over_dir.cpp.s
-.PHONY : trash/iterate_over_dir.cpp.s
+trash/read_by_words.cpp.s:
+	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/trash/read_by_words.cpp.s
+.PHONY : trash/read_by_words.cpp.s
 
 # Help Target
 help:
@@ -417,21 +390,18 @@ help:
 	@echo "... src/merge_all.o"
 	@echo "... src/merge_all.i"
 	@echo "... src/merge_all.s"
-	@echo "... src/read_archive.o"
-	@echo "... src/read_archive.i"
-	@echo "... src/read_archive.s"
-	@echo "... src/read_by_words.o"
-	@echo "... src/read_by_words.i"
-	@echo "... src/read_by_words.s"
 	@echo "... src/read_config.o"
 	@echo "... src/read_config.i"
 	@echo "... src/read_config.s"
+	@echo "... src/read_disk.o"
+	@echo "... src/read_disk.i"
+	@echo "... src/read_disk.s"
 	@echo "... src/write_result.o"
 	@echo "... src/write_result.i"
 	@echo "... src/write_result.s"
-	@echo "... trash/iterate_over_dir.o"
-	@echo "... trash/iterate_over_dir.i"
-	@echo "... trash/iterate_over_dir.s"
+	@echo "... trash/read_by_words.o"
+	@echo "... trash/read_by_words.i"
+	@echo "... trash/read_by_words.s"
 .PHONY : help
 
 
