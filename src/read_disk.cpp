@@ -87,14 +87,14 @@ void read_archive(const char *archive_file, ConcurrentQueue<std::string> &substr
     while (archive_read_next_header(archive_ptr, &entry_ptr) == ARCHIVE_OK) {
         boost::filesystem::path entry_path = boost::filesystem::path(archive_entry_pathname(entry_ptr));
         if ((entry_path.extension() == TEXT_FILE_L || entry_path.extension() == TEXT_FILE_U) && archive_entry_size(entry_ptr) <= MAX_TEXT_FILE_SIZE) {
-            std::cout << "entry" << entry_path.c_str() << "\n";
+            std::cout << "entry: " << entry_path.c_str() << "\n";
             std::string text = std::string(archive_entry_size(entry_ptr), 0);
             ret_signal = archive_read_data(archive_ptr, &text[0], text.size());
             std::cout << "куе" << ret_signal;
-            if (ret_signal != ARCHIVE_OK)
+            if (ret_signal == ARCHIVE_FATAL || ret_signal ==  ARCHIVE_WARN || ret_signal == ARCHIVE_RETRY)
                 continue;
             std::cout << "buffer" << text;
-            divide_and_push(text, substr_queue, max_words);
+            divide_and_push(text, std::ref(substr_queue), max_words);
         }
     }
     archive_free(archive_ptr);
@@ -104,14 +104,19 @@ void divide_and_push(const std::string& buff, ConcurrentQueue<std::string> &stri
     size_t counter = 0;
     size_t prev = 0;
     for(size_t i = 0; i < buff.size(); ++i){
+        std::cout<<buff[i];
         if(std::isspace(buff[i])){
+            std::cout<<"space"<<std::endl;
             ++counter;
         }
+        std::cout<<counter<<std::endl;
         if(counter == max_words){
             strings_queue.push(buff.substr(prev,i-prev));
             prev = i;
         }
     }
+    std::cout<<"shit";
+    strings_queue.push(buff.substr(prev, buff.size()-1));
 }
 
 

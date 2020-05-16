@@ -55,7 +55,7 @@ int main() {
 
     std::cout << "reading" << "\n";
     std::cout << config["infile"] << "\n";
-    read_disk(config["infile"],substring_queue,max_words);
+    read_disk(config["infile"],std::ref(substring_queue),max_words);
 
     std::cout << "counting" << "\n";
 
